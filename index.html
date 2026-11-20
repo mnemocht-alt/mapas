@@ -50,7 +50,7 @@ body.pp #zc{right:calc(min(250px,64vw) + 8px)}
 #ppl button.on{background:#2563eb26;border-radius:6px;font-weight:700}
 body.pd #ppl button::after{content:" ✕";color:#b4443c}
 .ppf{display:flex;gap:8px;justify-content:flex-end}.ppf button{width:42px;padding:8px 0;text-align:center}
-@media(max-width:480px){#bm{max-width:30vw}header{gap:4px}header button{padding:8px 9px}#bq .lb{display:none}
+@media(max-width:480px){#bm{max-width:30vw}header{gap:4px}header button{padding:8px 9px}#bq .lb,#bar .lb,#bau .lb{display:none}
 #pp{top:auto;left:0;right:0;bottom:0;width:auto;height:244px;border-radius:14px 14px 0 0;box-shadow:0 -2px 8px #0003}
 #ppb{padding:8px 10px 6px}#ppt{font-size:16px;margin-bottom:6px}
 #ppl{display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;margin:6px 0}
@@ -61,12 +61,26 @@ body.pp #zc{right:8px;bottom:252px}.ppf button{padding:6px 0}}
 #rtb button.on{background:#dbeafe;border-color:#2563eb;box-shadow:0 0 0 2px #2563eb}
 #rtb .sw2.on{box-shadow:0 0 0 3px #2563eb;position:relative}
 #rtb .sw2.on::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;font-weight:700}
+#dq [hidden]{display:none!important}
+
+.hw{display:inline-block;margin:3px;padding:6px 10px;border-radius:14px;background:#eff6ff;border:1px solid #93c5fd;font-size:16px}#dh input,#dh select{font-size:16px;padding:8px;margin:4px 0;border:1px solid #cbd5e1;border-radius:8px;max-width:100%}#dh [hidden]{display:none!important}
+footer [hidden],header [hidden]{display:none!important}
+#ank{display:none;flex:1;overflow:auto;margin:6px 0;line-height:1.45}body.s #ank{display:block}body.s #ppb>.ppr,body.s #ppl,body.s .ppf{display:none!important}#ank button{display:block;width:100%;margin:6px 0;padding:10px;font-size:15px;border-radius:10px;border:1px solid #94a3b8;background:#fff;text-align:left}
+#ank{overflow:auto;min-height:0;flex:1}
+.cn{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;margin-bottom:6px}.cn b{text-decoration:underline}
+.rb{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin-top:6px}
+.rb button{padding:7px 2px;font-size:14px;line-height:1.15;color:#fff;border:0;border-radius:8px}.rb small{display:block;font-size:11px;opacity:.9}
+#ank .rb button{color:#fff!important;border:0!important;font-weight:600}#ank .rb .q1{background:#dc2626!important}#ank .rb .q2{background:#d97706!important}#ank .rb .q3{background:#16a34a!important}#ank .rb .q4{background:#2563eb!important}
+#bnt{position:relative}#nb{position:absolute;top:0;right:0;min-width:17px;height:17px;border-radius:9px;background:#e11d2f;color:#fff;font:700 11px/17px system-ui,sans-serif;text-align:center;padding:0 4px;pointer-events:none}#nb[hidden]{display:none}
+#dnt{margin:64px auto auto 8px;width:min(92vw,380px)}#ntl{max-height:50vh;overflow:auto;margin:8px 0}.nti{border-bottom:1px solid #e2e8f0;padding:8px 6px;font-size:15px;line-height:1.35}.nti small{display:block;color:#64748b;font-size:12px}
+#aks,#abn,#arx{display:block;width:100%;margin-top:6px}
+@media(max-width:480px){.rb{grid-template-columns:repeat(4,1fr)}}
 </style></head><body>
-<header><button id=bm></button><label class=sw><input type=checkbox id=bx><i></i>🎓 Estudiar</label><button id=bkb aria-label="Atajos de teclado">⌨</button><button id=bnum aria-label="Números automáticos" title="Números automáticos">🔢</button><button id=bcol aria-label="Color por nivel" title="Color por nivel">🌈</button><button class=ed id=bq>➜<span class=lb> Flechas</span></button></header>
-<main><svg id=cv><g id=w></g></svg><aside id=pp><button id=ppx aria-label="Cerrar panel">›</button><div id=ppb><div id=ppt>Predeterminado</div><div class=ppr><input id=ppi placeholder="Escribir…" enterkeyhint=done autocomplete=off><button id=ppo aria-label="Poner en la flecha">✓</button></div><div id=ppl></div><div class=ppf><button id=ppa title="Añadir a predeterminados" aria-label="Añadir a predeterminados">＋</button><button id=ppd title="Quitar predeterminados" aria-label="Quitar predeterminados">🗑</button></div></div></aside><div id=zc><button id=bfit aria-label="Vista general">⤢</button><button id=zi aria-label="Acercar">+</button><button id=zo aria-label="Alejar">−</button></div></main>
+<header><button id=bnt aria-label="Avisos" title="Avisos (B)">🔔<span id=nb hidden></span></button><button id=bm></button><label class=sw><input type=checkbox id=bx><i></i>🎓 Estudiar</label><button id=bkb aria-label="Atajos de teclado">⌨</button><button id=bnum aria-label="Números automáticos" title="Números automáticos">🔢</button><button id=bcol aria-label="Color por nivel" title="Color por nivel">🌈</button><button id=bh>🧠<span class=lb> MAYOR</span></button><button class=ed id=bq>➜<span class=lb> Flechas</span></button><button class=ed id=bar>▦<span class=lb> Ordenar</span></button><button class=ed id=bau hidden>↩<span class=lb> Deshacer</span></button></header>
+<main><svg id=cv><g id=w></g></svg><aside id=pp><button id=ppx aria-label="Cerrar panel">›</button><div id=ppb><div id=ppt>Conexiones</div><div class=ppr><input id=ppi placeholder="Escribir…" enterkeyhint=done autocomplete=off><button id=ppo aria-label="Poner en la flecha">✓</button></div><div id=ppl></div><div class=ppf><button id=ppa title="Añadir a predeterminados" aria-label="Añadir a predeterminados">＋</button><button id=ppd title="Quitar predeterminados" aria-label="Quitar predeterminados">🗑</button></div><div id=ank></div></div></aside><div id=zc><button id=bfit aria-label="Vista general">⤢</button><button id=zi aria-label="Acercar">+</button><button id=zo aria-label="Alejar">−</button></div></main>
 <footer>
-<button id=bix>📑 Fijos</button><button class=ed id=bfl>↗ Flecha libre</button><button class=ed id=bt>⌐ Tipo</button><button class=ed id=bre>⇄ Invertir</button><button class=ed id=ba>＋ Cuadro</button><button class=ed id=be>✎ Texto 🖼</button><button class=ed id=bl>🔗 Conectar</button><button class=ed id=br>📌 Fijo</button><button class=ed id=bf>◻ Forma</button><button class=ed id=bc>🎨</button><button class=ed id=bsh>📤 Anki</button><button class=ed id=bd>🗑</button>
-<button class=st id=bsa>👁 Mostrar todo</button><button class=st id=bha>🙈 Ocultar todo</button>
+<button id=bix>📑 Fijos</button><button class=ed id=bfl>↗ Flecha libre</button><button class=ed id=bbi>↔ Bilateral</button><button class=ed id=bml>⑂ Doble o más</button><button class=ed id=bt hidden>⌐ Tipo</button><button class=ed id=bre>⇄ Invertir</button><button class=ed id=ba>＋ Cuadro</button><button class=ed id=be>✎ Texto 🖼</button><button class=ed id=bl>🔗 Conectar</button><button class=ed id=br>📌 Fijo</button><button class=ed id=bf>◻ Forma</button><button class=ed id=bc>🎨</button><button class=ed id=bsh>📤 Anki</button><button class=ed id=bd>🗑</button>
+<button class=st id=brp>🧠 Repasar</button><button class=st id=bbr>🌿 Rama</button><button class=st id=bsa>👁 Mostrar todo</button><button class=st id=bha>🙈 Ocultar todo</button>
 </footer>
 <div id=ts></div>
 <dialog id=dn><div>
@@ -77,6 +91,19 @@ body.pp #zc{right:8px;bottom:252px}.ppf button{padding:6px 0}}
 <label>Enlace (opcional)<input id=eu type=url placeholder="https://…" autocomplete=off></label>
 <label style="display:flex;gap:8px;align-items:center"><input type=checkbox id=eo style="width:auto;margin:0"> 📌 Fijo: siempre visible en modo Estudiar</label>
 <div class=r><button type=button id=ok>Aceptar</button><button type=button id=no>Cancelar</button></div></div></dialog>
+<dialog id=dh><div><b style="font-size:18px">🧠 MAYOR</b> <small style="color:#64748b">sistema de Hérigone</small>
+<div class=r><button type=button id=dht1>📖 Diccionario</button><button type=button id=dht2>🎯 Repaso</button><button type=button id=dht3>✏️ Mis palabras</button></div>
+<div id=dhd><input id=dhi inputmode=numeric autocomplete=off placeholder="Escribe un número (ej. 953)" style="width:100%"><div id=dho style="margin:6px 0;line-height:1.6"></div><div class=r><button type=button id=dhr>🔀 Otras palabras</button></div></div>
+<div id=dhw hidden><input id=dwi autocomplete=off placeholder="Número (para quitar) o palabra (para añadir)" style="width:100%"><div id=dwo style="margin:6px 0;line-height:1.8"></div><div class=r><button type=button id=dwr>↩ Restaurar palabras quitadas</button></div></div>
+<div id=dhq hidden><div id=hqc0><label>Dígitos <select id=hqd><option value=2>2<option value=3>3<option value=4>4<option value=0>Aleatorio</select></label> <label>Cantidad <select id=hqn><option>5<option>10<option>15<option>20</select></label> <label>Palabras extra al final <select id=hqx><option>0<option>1<option>2<option>3<option>4<option>5<option>6<option>7<option>8<option>10</select></label><div class=r><button type=button id=hqs>▶ Empezar</button></div></div>
+<div id=hqb hidden><div id=hqp style="font-size:20px;margin:8px 0"></div><input id=hqa autocomplete=off placeholder="Escribe una palabra" style="width:100%"><div id=hqf style="min-height:24px;margin:4px 0"></div><div class=r><button type=button id=hqk>Comprobar</button></div></div>
+<div id=hqz></div></div>
+<button type=button id=dhx>Cerrar</button></div></dialog>
+<dialog id=dpn><div><b>⑂ Flecha con varias puntas</b><div style="margin:6px 0">¿Cuántas cabezas?</div><div class=r id=dpb><button type=button data-n=2>2</button><button type=button data-n=3>3</button><button type=button data-n=4>4</button><button type=button data-n=5>5</button><button type=button data-n=6>6</button></div><button type=button id=dpc>Cancelar</button></div></dialog>
+<dialog id=dr><div><b style="font-size:20px">🧠 ¿Quieres repasar?</b><div id=drt style="margin:10px 0;line-height:1.5"></div><div id=drs></div><div class=r><button type=button id=dry>🧠 Repasar</button><button type=button id=drn>Ahora no</button></div></div></dialog>
+<dialog id=dnt><div><b style="font-size:18px">🔔 Avisos</b><button type=button id=ntx style="float:right">✕</button><div id=ntl></div>
+<label style="font-size:14px">Avisos al día <select id=nth><option value=2>2</option><option value=3>3</option></select></label>
+<div class=r><button type=button id=ntr>🧠 Repasar ahora</button><button type=button id=ntt>🔔 Probar</button><button type=button id=ntc>🗑 Borrar</button></div></div></dialog>
 <dialog id=dm><div>
 <label>Nombre del mapa<input id=mn autocomplete=off></label>
 <div class=r><button type=button id=bs>💾 Guardar</button><button type=button id=bnw>🆕 Nuevo</button></div>
@@ -88,9 +115,9 @@ body.pp #zc{right:8px;bottom:252px}.ppf button{padding:6px 0}}
 <input type=file id=fi accept=".json,application/json" hidden><input type=file id=fim accept="image/*" hidden><input type=file id=fau accept="audio/*" hidden><dialog id=dk><div><b>⌨ Atajos de teclado</b><div style="font-size:13px;color:#475569;margin-top:4px">Teclas sueltas, sin Ctrl, para no chocar con los atajos del navegador. No funcionan mientras escribes o hay una ventana abierta.</div><table id=kt></table><button type=button id=kc>Cerrar</button></div></dialog><dialog id=dx><div><b>📑 Cuadros fijos</b><div id=xl></div><button type=button id=xc>Cerrar</button></div></dialog><dialog id=lb><img id=lbi alt=""><button type=button id=lbx>✕</button></dialog>
 <script>
 const $=i=>document.getElementById(i),cv=$('cv'),W=$('w'),PAL=['#e2e8f0','#bbf7d0','#bfdbfe','#fbcfe8','#fde68a'],
-DEFS='<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10z" fill="#475569"/></marker><marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10z" fill="#2563eb"/></marker></defs>',
+DEFS='<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="#475569"/></marker><marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="#2563eb"/></marker></defs>',
 esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let S,sel=null,selE=null,mode='e',link=0,D=null,pd=0,tt,sw=0,hl=null;const P=new Map();
+let RPM=0,BRM=0,BR=null,S,sel=null,selE=null,mode='e',link=0,multi=0,MG=null,AK=null,D=null,pd=0,tt,sw=0,hl=null;const P=new Map();
 const M=id=>S.nodes.find(n=>n.id==id);
 const ls=k=>{try{return localStorage[k]}catch(e){}};
 /* ---- Almacenamiento: IndexedDB + copia en memoria (antes localStorage, límite ≈5 MB) ---- */
@@ -104,9 +131,9 @@ if(DBH)idbTx('readwrite',(s,m)=>{ns.forEach(n=>{if(LIB[n])s.put(JSON.stringify(L
 else try{localStorage.mc_maps=JSON.stringify(LIB)}catch(e){warnSave()}}
 function pdel(n){dirty.delete(n);if(DBH)idbTx('readwrite',s=>s.delete(n)).catch(()=>{});else try{localStorage.mc_maps=JSON.stringify(LIB)}catch(e){}}
 addEventListener('visibilitychange',()=>{if(document.visibilityState=='hidden')flush()});addEventListener('pagehide',flush);
-async function initStore(){try{DBH=await idbOpen();const o={};let cur;
-await new Promise((r,j)=>{const t=DBH.transaction(['maps','meta']),s=t.objectStore('maps'),ks=s.getAllKeys(),vs=s.getAll(),c=t.objectStore('meta').get('cur');t.oncomplete=()=>{ks.result.forEach((k,i)=>{try{o[k]=JSON.parse(vs.result[i])}catch(e){}});cur=c.result;r()};t.onerror=t.onabort=()=>j(t.error)});
-LIB=o;CUR=cur;
+async function initStore(){try{DBH=await idbOpen();const o={};let cur,HDL;
+await new Promise((r,j)=>{const t=DBH.transaction(['maps','meta']),s=t.objectStore('maps'),ks=s.getAllKeys(),vs=s.getAll(),c=t.objectStore('meta').get('cur'),dd=t.objectStore('meta').get('hdict');t.oncomplete=()=>{HDL=dd.result;ks.result.forEach((k,i)=>{try{o[k]=JSON.parse(vs.result[i])}catch(e){}});cur=c.result;r()};t.onerror=t.onabort=()=>j(t.error)});
+LIB=o;CUR=cur;try{HD=Object.assign({a:[],x:[]},HDL||JSON.parse(localStorage.mc_hd||'null')||{});bld()}catch(e){}
 let old={};try{old=JSON.parse(ls('mc_maps')||'{}')}catch(e){}
 const nw=Object.keys(old).filter(k=>!(k in LIB));
 if(nw.length){await idbTx('readwrite',s=>nw.forEach(k=>s.put(JSON.stringify(old[k]),k)));nw.forEach(k=>LIB[k]=old[k])}
@@ -141,7 +168,10 @@ const emid=(a,b)=>{const p=clip(a,b),q=clip(b,a);return[(p[0]+q[0])/2,(p[1]+q[1]
 /* extremo de flecha: cuadro (d.a/d.b = id) o punto libre (id 0 + d.pa/d.pb) */
 const EP=(d,k)=>{const id=k?d.b:d.a;if(id)return M(id)||null;const p=k?d.pb:d.pa;return p?{x:p[0],y:p[1],w:0,h:0,fr:1}:null};
 /* camino de la flecha: k 0 recta (o curva si tiene d.o), 1 esquina, 2 curva */
-function geoE(d){const a=EP(d,0),b=EP(d,1);if(!a||!b)return null;const k=d.k||0,o=d.o||[0,0],sg=Math.sign;
+function gf(d){const E=S.edges.filter(e=>e.g==d.g&&e.a&&e.b&&M(e.a)&&M(e.b));if(E.length<2||!E.includes(d))return null;
+const A=M(d.a),T=E.map(e=>M(e.b)),cx=T.reduce((s,t)=>s+t.x,0)/T.length,cy=T.reduce((s,t)=>s+t.y,0)/T.length,Q0=T.map(t=>clip(t,{x:(A.x+cx)/2,y:(A.y+cy)/2})),mx=Q0.reduce((s,q)=>s+q[0],0)/T.length,my=Q0.reduce((s,q)=>s+q[1],0)/T.length,P=clip(A,{x:mx,y:my}),J={x:P[0]+(mx-P[0])*.5,y:P[1]+(my-P[1])*.5},q=clip(M(d.b),J),m=[(J.x+q[0])/2,(J.y+q[1])/2];
+return{l:`M${J.x} ${J.y}L${q[0]} ${q[1]}`,bs:m,h:m,p:[J.x,J.y],q,tr:`M${P[0]} ${P[1]}L${J.x} ${J.y}`,first:E[0]===d}}
+function geoE(d){const a=EP(d,0),b=EP(d,1);if(!a||!b)return null;if(d.g){const f=gf(d);if(f)return f}const k=d.k||0,o=d.o||[0,0],sg=Math.sign;
 if(k==1){const dx=b.x-a.x,dy=b.y-a.y;
 if(Math.abs(dx)>=Math.abs(dy)){const s=sg(dx)||1,x1=a.x+s*a.w/2,x2=b.x-s*b.w/2,bx=(x1+x2)/2,mx=bx+o[0],my=(a.y+b.y)/2;return{l:`M${x1} ${a.y}H${mx}V${b.y}H${x2}`,bs:[bx,my],h:[mx,my],p:[x1,a.y],q:[x2,b.y],ho:1}}
 const s=sg(dy)||1,y1=a.y+s*a.h/2,y2=b.y-s*b.h/2,by=(y1+y2)/2,my=by+o[1],mx=(a.x+b.x)/2;return{l:`M${a.x} ${y1}V${my}H${b.x}V${y2}`,bs:[mx,by],h:[mx,my],p:[a.x,y1],q:[b.x,y2],ho:0}}
@@ -150,7 +180,7 @@ if(d.o){const c={x:m0[0]+2*o[0],y:m0[1]+2*o[1]},p=clip(a,c),q=clip(b,c);return{l
 const p=clip(a,b),q=clip(b,a);return{l:`M${p[0]} ${p[1]}L${q[0]} ${q[1]}`,bs:m0,h:m0,p,q}}
 const nodeAt=(x,y,ex)=>S.nodes.slice().reverse().find(n=>n.id!=ex&&Math.abs(x-n.x)<=n.w/2+6&&Math.abs(y-n.y)<=n.h/2+6);
 function mk(x,y){const n={id:++S.c,x,y,t:'',f:0,s:0,c:0,r:0};S.nodes.push(n);return n}
-function fix(){S.nodes.forEach(n=>{if(n.n)n.t=[n.t,n.n].filter(Boolean).join('\n');delete n.n;delete n.o;n.f=n.f||0;n.r=0});S.edges=S.edges||[];S.v=S.v||{x:innerWidth/2,y:innerHeight/3,k:1};S.c=Math.max(S.c||0,0,...S.nodes.map(n=>n.id))}
+function fix(){S.nodes.forEach(n=>{if(n.n)n.t=[n.t,n.n].filter(Boolean).join('\n');delete n.n;delete n.o;n.f=n.f||0;n.r=0});S.edges=S.edges||[];S.v=S.v||{x:innerWidth/2,y:innerHeight/3,k:1};S.c=Math.max(S.c||0,0,...S.nodes.map(n=>n.id));AK=null;BR=null;if(mode=='s'&&RPM)setTimeout(rpNext,0)}
 
 /* numeración automática: [letras]NIVEL.camino. 1 = tema; 2.1…2.9, a2.1…a2.9, b2.1… = subtemas; 3.11, 3.1a1… = más niveles.
    Cada paso del camino = letras de bloque (9 hermanos por bloque: ''=1-9, a=10-18, b=19-27… z, aa, ab…) + dígito 1-9.
@@ -159,39 +189,40 @@ const LC=['#e2e8f0','#bbf7d0','#bfdbfe','#fbcfe8','#fde68a','#fed7aa','#ddd6fe',
 const LT=b=>{let s='';while(b>0){b--;s=String.fromCharCode(97+b%26)+s;b=Math.floor(b/26)}return s};
 const NL=T=>T.length?T[0][0]+(T.length+1)+'.'+T[0][1]+T.slice(1).map(t=>t[0]+t[1]).join(''):'1';
 const LK=['#94a3b8','#4ade80','#60a5fa','#f472b6','#fbbf24','#fb923c','#a78bfa','#22d3ee','#f87171','#a3e635'];
-function nums(){const R={},ch={},hp={};S.nodes.forEach(n=>ch[n.id]=[]);
+let PAR={},LV={},KID={},RT=[];function nums(){const R={},ch={},hp={};PAR={};LV={};KID={};RT=[];S.nodes.forEach(n=>ch[n.id]=[]);
 S.edges.forEach(d=>{if(d.a&&d.b&&d.a!=d.b&&ch[d.a]&&ch[d.b]){ch[d.a].push(d.b);hp[d.b]=1}});
 const bx=(a,b)=>a.x-b.x||a.y-b.y,by=(a,b)=>a.y-b.y||a.x-b.x;
-const walk=r=>{R[r.id]='1';const q=[[r,[]]];
+const walk=r=>{R[r.id]='1';LV[r.id]=1;RT.push(r.id);const q=[[r,[]]];
 while(q.length){const[n,T]=q.shift(),k=[...new Set(ch[n.id])].map(M).filter(c=>c&&!(c.id in R));
 if(k.length>1){const X=k.map(c=>c.x),Y=k.map(c=>c.y);k.sort(Math.max(...Y)-Math.min(...Y)>Math.max(...X)-Math.min(...X)?by:bx)}
-k.forEach((c,i)=>{const U=T.concat([[LT(Math.floor(i/9)),i%9+1]]);R[c.id]=NL(U);q.push([c,U])})}};
+KID[n.id]=k.map(c=>c.id);k.forEach((c,i)=>{const U=T.concat([[LT(Math.floor(i/9)),i%9+1]]);R[c.id]=NL(U);PAR[c.id]=n.id;LV[c.id]=U.length+1;q.push([c,U])})}};
 const o=S.nodes.slice().sort(bx);o.filter(n=>!hp[n.id]).forEach(walk);o.forEach(n=>{if(!(n.id in R))walk(n)});return R}
 function scene(ex){let e='',g='',o='',h='',bb=[1e9,1e9,-1e9,-1e9];
 const bx=(a,b,c,d)=>{bb=[Math.min(bb[0],a),Math.min(bb[1],b),Math.max(bb[2],c),Math.max(bb[3],d)]};
 S.nodes.forEach(geo);const NU=(!S.nc||(!ex&&!S.nn))?nums():{},NM=!ex&&!S.nn?NU:{};
 const hr=Math.min(40,14/Math.max(S.v.k,.35));
-S.edges.forEach((d,i)=>{const g0=geoE(d);if(!g0)return;const a=EP(d,0),b=EP(d,1),on=!ex&&selE==i,l=`d="${g0.l}"`;
+S.edges.forEach((d,i)=>{const g0=geoE(d);if(!g0)return;const L0=e.length;const a=EP(d,0),b=EP(d,1),on=!ex&&selE==i,l=`d="${g0.l}"`;
+if(g0.tr&&g0.first){const gs=!ex&&S.edges[selE]&&S.edges[selE].g==d.g;e+=`<path d="${g0.tr}" fill="none" stroke="${gs?'#2563eb':'#475569'}" stroke-width="${gs?3:2}"/>`;if(!ex)e+=`<path data-e="${i}" d="${g0.tr}" fill="none" stroke="transparent" stroke-width="20"/>`}
 if(d.o||d.k==1)bx(g0.h[0]-10,g0.h[1]-10,g0.h[0]+10,g0.h[1]+10);
 [a,b].forEach(z=>{if(z.fr)bx(z.x-8,z.y-8,z.x+8,z.y+8)});
-e+=`<path ${l} fill="none" stroke="${on?'#2563eb':'#475569'}" stroke-width="${on?3:2}" marker-end="url(#${on?'as':'ar'})"/>`;
+e+=`<path ${l} fill="none" stroke="${on?'#2563eb':'#475569'}" stroke-width="${on?3:2}" marker-end="url(#${on?'as':'ar'})"${d.bi?` marker-start="url(#${on?'as':'ar'})"`:''}/>`;
 if(a.fr)e+=`<circle cx="${a.x}" cy="${a.y}" r="4" fill="${on?'#2563eb':'#475569'}"/>`;
 if(!ex)e+=`<path data-e="${i}" ${l} fill="none" stroke="transparent" stroke-width="20"/>`;
 if(d.l){const LL=wrap(d.l,18),lw=Math.max(...LL.map(x=>x.length))*7.4+18,lh=LL.length*16+10,lx=g0.h[0],ly=g0.h[1];let an=d.k==1?0:Math.atan2(g0.q[1]-g0.p[1],g0.q[0]-g0.p[0])*180/Math.PI;if(an>90)an-=180;else if(an<=-90)an+=180;const mm=Math.max(lw,lh)/2;bx(lx-mm,ly-mm,lx+mm,ly+mm);
 e+=`<g ${ex?'':`data-e="${i}" style="cursor:pointer"`} transform="translate(${lx} ${ly}) rotate(${an})"><rect x="${-lw/2}" y="${-lh/2}" width="${lw}" height="${lh}" rx="${Math.min(lh/2,12)}" fill="#f8fafc" stroke="${on?'#2563eb':'#94a3b8'}" stroke-width="${on?2:1}"/>${LL.map((x,j)=>`<text x="0" y="${-lh/2+16.5+j*16}" text-anchor="middle" font-size="13" fill="#1e293b">${esc(x)}</text>`).join('')}</g>`}
 if(!ex&&mode=='e'&&on){h+=`<g data-b="${i}" style="cursor:move" opacity="${d.l?.55:1}"><circle cx="${g0.h[0]}" cy="${g0.h[1]}" r="${d.l?7:12}" fill="#f59e0b" stroke="#fff" stroke-width="2"/><circle cx="${g0.h[0]}" cy="${g0.h[1]}" r="${d.l?2.5:4}" fill="#fff"/></g>`;
-[[0,g0.p,a],[1,g0.q,b]].forEach(([k,pt,z])=>{h+=`<g data-q="${i}:${k}" style="cursor:grab"><circle cx="${pt[0]}" cy="${pt[1]}" r="${hr}" fill="#fff" stroke="#2563eb" stroke-width="3"/>${z.fr?'':`<circle cx="${pt[0]}" cy="${pt[1]}" r="${hr/3}" fill="#2563eb"/>`}</g>`})}});
+[[0,g0.p,a],[1,g0.q,b]].forEach(([k,pt,z])=>{if(g0.tr&&k==0)return;h+=`<g data-q="${i}:${k}" style="cursor:grab"><circle cx="${pt[0]}" cy="${pt[1]}" r="${hr}" fill="#fff" stroke="#2563eb" stroke-width="3"/>${z.fr?'':`<circle cx="${pt[0]}" cy="${pt[1]}" r="${hr/3}" fill="#2563eb"/>`}</g>`})}if(!ex&&BRA()&&!BRA().es.has(d.a+'>'+d.b))e=e.slice(0,L0)+'<g opacity=".1">'+e.slice(L0)+'</g>'});
 S.nodes.forEach(n=>{const hid=HH(n),ci=!S.nc&&NU[n.id]?(+NU[n.id].match(/\d+/)[0]-1)%LC.length:(n.c||0),x=n.x-n.w/2,y=n.y-n.h/2,on=!ex&&sel==n.id;bx(x,y,x+n.w,y+n.h);
 const sh=n.s==1?`<ellipse cx="${n.w/2}" cy="${n.h/2}" rx="${n.w/2}" ry="${n.h/2}"`:`<rect width="${n.w}" height="${n.h}" rx="${n.s==2?n.h/2:8}"`;
 const tx=HH(n)?(`<text x="${n.w/2}" y="${n.h/2+5}" text-anchor="middle" font-size="13" font-style="italic" fill="#64748b">Concepto oculto</text>`):n.t?RL(n,n.cpl).map((l,j)=>`<text x="${n.w/2}" y="${n.top+(n.h-n.top-n.ar)/2+(j-(n.L.length-1)/2)*n.lh+(n.fs||15)*.33}" text-anchor="middle" font-size="${n.fs||15}" fill="#0f172a">${SP(l)}</text>`).join(''):(n.i||n.a)?'':`<text x="${n.w/2}" y="${n.h/2+5}" text-anchor="middle" fill="#94a3b8">…</text>`;
 const im=!HH(n)&&n.i?`<image data-z="${n.id}" style="cursor:zoom-in" xlink:href="${n.i}" x="${(n.w-n.dw)/2}" y="10" width="${n.dw}" height="${n.dh}"/>`:'';const au=!HH(n)&&(n.a||n.u)?rowB(n,n.w/2,n.h-19):'';const bd=!ex&&mode=='e'&&n.f?`<circle cx="${n.w-6}" cy="6" r="9" fill="#facc15" stroke="#a16207"/><text x="${n.w-6}" y="10.5" text-anchor="middle" font-size="12" font-weight="700" fill="#422006">📌</text>`:'';
-g+=`<g data-i="${n.id}" transform="translate(${x} ${y})" opacity="${hid?.55:1}" style="cursor:pointer">${sh} fill="${(RV(n)?LK:LC)[ci]}" stroke="${on?'#2563eb':hl==n.id&&!ex?'#f59e0b':'#334155'}" stroke-width="${on?3:hl==n.id&&!ex?5:1.5}"${hid?' stroke-dasharray="6 4"':''}/>${im}${tx}${au}${bd}${NM[n.id]?`<text x="3" y="-5" font-size="12" font-weight="600" fill="#334155" opacity=".5" pointer-events="none">${NM[n.id]}</text>`:''}</g>`;
+g+=`<g data-i="${n.id}" transform="translate(${x} ${y})" opacity="${!ex&&BRA()&&!BRA().set.has(n.id)?0.12:hid?(RPF(n,ex)?.95:.55):1}" style="cursor:pointer">${sh} fill="${RPF(n,ex)||(RV(n)?LK:LC)[ci]}" stroke="${on?'#2563eb':(hl==n.id||AKH(n))&&!ex?'#f59e0b':BK(n,ex)?'#16a34a':RPF(n,ex)=='#fca5a5'?'#dc2626':'#334155'}" stroke-width="${on?3:(hl==n.id||AKH(n))&&!ex?6:BK(n,ex)?4:RPF(n,ex)=='#fca5a5'?3:1.5}"${hid?' stroke-dasharray="6 4"':''}/>${im}${tx}${au}${bd}${NM[n.id]?`<text x="3" y="-5" font-size="12" font-weight="600" fill="#334155" opacity=".5" pointer-events="none">${NM[n.id]}</text>`:''}</g>`;
 if(on)[['tl',x,y],['tr',x+n.w,y],['bl',x,y+n.h],['br',x+n.w,y+n.h]].forEach(([k,a,b])=>h+=`<g data-rz="${k}" style="cursor:${k=='tl'||k=='br'?'nwse-resize':'nesw-resize'}"><circle cx="${a}" cy="${b}" r="17" fill="transparent"/><rect x="${a-7}" y="${b-7}" width="14" height="14" rx="3" fill="#fff" stroke="#7c3aed" stroke-width="2.5"/></g>`);
 if(on)[['u',n.x,y-20],['r',x+n.w+20,n.y],['d',n.x,y+n.h+20],['l',x-20,n.y]].forEach(([k,a,b])=>h+=`<g data-h="${k}" style="cursor:pointer"><circle cx="${a}" cy="${b}" r="15" fill="#2563eb"/><text x="${a}" y="${b+6}" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">+</text></g>`)});
 return{m:`<g font-family="system-ui,Segoe UI,Roboto,sans-serif" font-size="15">${e}${g}${o}${h}</g>`,bb}}
 
 function view(){W.setAttribute('transform',`translate(${S.v.x} ${S.v.y}) scale(${S.v.k})`)}
-function draw(q){if(eb!=null&&selE!==eb)eb=null;W.innerHTML=scene().m;view();$('bm').textContent='📁 '+S.name;$('bx').checked=mode=='s';$('bl').classList.toggle('on',!!link);$('bq').classList.toggle('on',!!qc);$('bnum').classList.toggle('on',!S.nn);$('bcol').classList.toggle('on',!S.nc);const sn=M(sel);$('br').classList.toggle('on',!!(sn&&sn.f));ppu();if(!q)save()}
+function draw(q){if(eb!=null&&selE!==eb)eb=null;W.innerHTML=scene().m;view();$('bm').textContent='📁 '+S.name;$('bx').checked=mode=='s';$('bl').classList.toggle('on',!!link);$('bq').classList.toggle('on',!!qc);$('bnum').classList.toggle('on',!S.nn);$('bcol').classList.toggle('on',!S.nc);$('bbr').classList.toggle('on',!!BRM);$('brp').classList.toggle('on',!!RPM);const sn=M(sel);$('br').classList.toggle('on',!!(sn&&sn.f));ppu();if(!q)save()}
 function zoom(f,cx,cy){const r=cv.getBoundingClientRect(),v=S.v,x=cx-r.left,y=cy-r.top,k=Math.min(4,Math.max(.05,v.k*f));v.x=x-(x-v.x)*k/v.k;v.y=y-(y-v.y)*k/v.k;v.k=k;view()}
 function fit(){if(!S.nodes.length)return;const b=scene(1).bb,r=cv.getBoundingClientRect(),w=Math.max(b[2]-b[0],1),h=Math.max(b[3]-b[1],1),k=Math.min(1.5,Math.max(.05,Math.min((r.width-100)/w,(r.height-100)/h)));S.v.k=k;S.v.x=(r.width-w*k)/2-b[0]*k;S.v.y=(r.height-h*k)/2-b[1]*k;view()}
 function zb(f){const r=cv.getBoundingClientRect();zoom(f,r.left+r.width/2,r.top+r.height/2)}
@@ -215,13 +246,13 @@ $('et').onkeydown=e=>{if(e.key=='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefaul
 function tap(el){const d=(el&&el.dataset)||{};
 if(d.p){playU(M(d.p).a);return}
 if(d.l){openUrl(M(d.l).u);return}
-if(mode=='s'){if(d.z){zoomImg(M(d.z).i);return}const n=M(d.i);if(n&&H(n)){n.r=n.r?0:1;draw()}return}
+if(mode=='s'){if(d.z){zoomImg(M(d.z).i);return}const n=M(d.i);if(n&&BRM&&brTap(n))return;if(n&&RPM){if(BRM&&AK&&AK.id==n.id&&AK.st==0){AK.st=1;n.r=1;akr();draw()}return}if(n&&H(n)){if(!n.r){askA(n);return}n.r=0;if(AK&&AK.id==n.id)AK=null;draw()}return}
 if(d.b!=null||d.q!=null||d.rz!=null)return;
 if(d.h)return addDir(d.h);
 if(d.z){const n=M(d.z);if(sel==n.id)zoomImg(n.i);else{sel=n.id;selE=null;draw()}return}
-if(d.i!=null){const i=+d.i;if(qc&&sel!=null&&sel!=i){const n0=S.edges.length;toggle(sel,i);selE=S.edges.length>n0?S.edges.length-1:null}else{if(link&&sel!=null&&sel!=i){toggle(sel,i);link=0}sel=i;selE=null}}
-else if(d.e!=null){selE=+d.e;sel=null;link=0;pph=0}
-else{sel=selE=null;link=0}
+if(d.i!=null){const i=+d.i;if(multi&&MG&&i!=MG.o){addHead(i);return}if(qc&&sel!=null&&sel!=i){const n0=S.edges.length;toggle(sel,i);selE=S.edges.length>n0?S.edges.length-1:null}else{if(link&&sel!=null&&sel!=i){toggle(sel,i);link=0}sel=i;selE=null}}
+else if(d.e!=null){selE=+d.e;sel=null;link=0;pph=0;multi=0;$('bml').classList.remove('on')}
+else{sel=selE=null;link=0;multi=0;$('bml').classList.remove('on')}
 draw()}
 const pts=()=>[...P.values()];
 cv.onpointerdown=e=>{if(e.button>0)return;cv.setPointerCapture(e.pointerId);P.set(e.pointerId,[e.clientX,e.clientY]);
@@ -268,7 +299,18 @@ $('bfl').onclick=newArrow;
 $('bt').onclick=()=>{const d=S.edges[selE];if(!d)return tip('Selecciona una flecha');d.k=((d.k||0)+1)%3;delete d.o;
 if(d.k==2){const a=EP(d,0),b=EP(d,1),dx=b.x-a.x,dy=b.y-a.y,L=Math.hypot(dx,dy)||1;d.o=[-dy/L*50,dx/L*50]}
 tip(['Flecha recta','Flecha en esquina','Flecha curva'][d.k]);draw()};
-$('bre').onclick=()=>{const d=S.edges[selE];if(!d)return tip('Selecciona una flecha');[d.a,d.b]=[d.b,d.a];[d.pa,d.pb]=[d.pb,d.pa];tip('Flecha invertida');draw()};
+$('bbi').onclick=()=>{const d=S.edges[selE];if(!d)return tip('Selecciona una flecha');if(d.g)return tip('Una flecha con varias puntas ya tiene su propio formato');d.bi=d.bi?0:1;tip(d.bi?'Flecha bilateral ↔':'Flecha de un solo sentido');draw()};
+$('bml').onclick=()=>{if(multi){endMulti('Listo');return}let o=null,pre=null;const de=S.edges[selE];if(selE!=null&&de&&de.a&&M(de.a)){pre=de;o=de.a}else if(sel!=null&&M(sel))o=sel;
+if(o==null)return tip('Selecciona el cuadro de origen (o una flecha que salga de él)');MG={o,pre};$('dpn').showModal()};
+$('dpb').onclick=e=>{const b=e.target.closest('[data-n]');if(!b)return;$('dpn').close();const n=+b.dataset.n,pre=MG.pre,have=pre?(pre.g?S.edges.filter(x=>x.g==pre.g).length:1):0;
+if(n-have<=0){MG=null;return tip('Ya tiene '+have+' cabezas')}
+MG.g=(pre&&pre.g)||('g'+Date.now().toString(36));if(pre)pre.g=MG.g;MG.left=n-have;MG.n=n;multi=1;link=0;qc=0;sel=null;selE=null;$('bml').classList.add('on');tip('Toca '+MG.left+' cuadro'+(MG.left>1?'s':'')+' de destino');draw()};
+$('dpc').onclick=()=>{$('dpn').close();MG=null};
+function endMulti(m){multi=0;MG=null;$('bml').classList.remove('on');if(m)tip(m);draw()}
+function addHead(i){const k=S.edges.findIndex(e=>e.a==MG.o&&e.b==i);
+if(k>=0){const e=S.edges[k];if(e.g==MG.g){S.edges.splice(k,1);MG.left++;tip('Cabeza quitada: faltan '+MG.left)}else{e.g=MG.g;MG.left--}}else{S.edges.push({a:MG.o,b:i,g:MG.g});MG.left--}
+if(MG.left<=0){draw();return endMulti('Listo: flecha con '+MG.n+' cabezas')}tip('Faltan '+MG.left);draw()}
+$('bre').onclick=()=>{const d=S.edges[selE];if(!d)return tip('Selecciona una flecha');delete d.g;[d.a,d.b]=[d.b,d.a];[d.pa,d.pb]=[d.pb,d.pa];tip('Flecha invertida');draw()};
 /* ---- Atajos: teclas sueltas (sin Ctrl/Alt/⌘) para no chocar con los del navegador ---- */
 const ed=f=>()=>{if(mode=='e')f()};
 const KS=[['N','＋ Cuadro nuevo (a la derecha del seleccionado)',ed(()=>$('ba').click()),'ba'],
@@ -279,6 +321,9 @@ const KS=[['N','＋ Cuadro nuevo (a la derecha del seleccionado)',ed(()=>$('ba')
 ['I','⇄ Invertir dirección de la flecha',ed(()=>$('bre').click()),'bre'],
 ['C','🔗 Conectar con otro cuadro',ed(()=>$('bl').click()),'bl'],
 ['P','📌 Fijo / no fijo',ed(()=>$('br').click()),'br'],
+['O','▦ Ordenar todos los cuadros por nivel',ed(()=>$('bar').click()),'bar'],
+['R','🌿 Estudiar por rama (en modo Estudiar)',()=>{if(mode=='s')$('bbr').click()},'bbr'],
+['B','🔔 Abrir los avisos',()=>$('bnt').click(),'bnt'],
 ['S','🎓 Cambiar entre Editar y Estudiar',()=>{$('bx').checked=!$('bx').checked;$('bx').onchange()},null],
 ['M','📁 Abrir mapas',()=>$('bm').click(),'bm'],
 ['G','💾 Guardar en archivo',()=>$('bsf').click(),null]],
@@ -286,6 +331,7 @@ KX={};KS.forEach(k=>{KX[k[0]]=k[2];if(k[3])$(k[3]).title='Tecla '+k[0]});
 $('kt').innerHTML=KS.map(k=>`<tr><td><kbd>${k[0]}</kbd></td><td>${k[1]}</td></tr>`).join('')+'<tr><td><kbd>Supr</kbd> / <kbd>⌫</kbd></td><td>🗑 Borrar el cuadro o la flecha seleccionada</td></tr><tr><td><kbd>Esc</kbd></td><td>Quitar la selección / apagar flechas rápidas</td></tr><tr><td><kbd>?</kbd></td><td>Mostrar esta lista</td></tr>';
 $('bkb').onclick=()=>$('dk').showModal();$('kc').onclick=()=>$('dk').close();
 onkeydown=e=>{if(document.querySelector('dialog[open]'))return;const ae=document.activeElement;if(ae&&(/^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName)||ae.isContentEditable))return;
+if(mode=='s'&&AK&&!e.ctrlKey&&!e.metaKey&&!e.altKey){if(e.key==' '&&AK.st==0&&$('aks')){e.preventDefault();$('aks').click();return}if(AK.st==1&&/^[1-4]$/.test(e.key)){rateA(+e.key);return}}
 if(e.ctrlKey||e.metaKey||e.altKey)return;
 const k=e.key.length==1?e.key.toUpperCase():e.key;
 if(k=='?'){e.preventDefault();return $('dk').showModal()}
@@ -302,9 +348,81 @@ $('bc').onclick=()=>{const n=M(sel);if(n&&!S.nc)return tip('Color por nivel acti
 $('bd').onclick=del;
 $('bcol').onclick=()=>{S.nc=S.nc?0:1;draw();tip(S.nc?'Color por nivel apagado: usa 🎨 para elegir a mano':'Color automático por nivel')};
 $('bnum').onclick=()=>{S.nn=S.nn?0:1;draw();tip(S.nn?'Números ocultos':'Números automáticos activados')};
+
+/* ---- ▦ Ordenar: cada nivel en su columna (nivel 1 a la izquierda). Los hijos de un cuadro quedan juntos, con el padre centrado.
+   El orden entre hermanos no cambia, así que los números automáticos se conservan. ---- */
+let UND=null;
+function arrange(){
+if(!S.nodes.length)return tip('No hay cuadros que ordenar');
+S.nodes.forEach(geo);nums();
+const GY=36,GT=90,sh={},cy={},ids=S.nodes.filter(n=>LV[n.id]);
+const x0=Math.min(...ids.map(n=>n.x-n.w/2)),y0=Math.min(...ids.map(n=>n.y-n.h/2));
+const meas=id=>{let s=0;(KID[id]||[]).forEach((c,i)=>s+=meas(c)+(i?GY:0));return sh[id]=Math.max(M(id).h,s)};
+const put=(id,top)=>{const n=M(id),k=KID[id]||[],H=sh[id];let s=0;k.forEach((c,i)=>s+=sh[c]+(i?GY:0));let y=top+(H-s)/2;k.forEach(c=>{put(c,y);y+=sh[c]+GY});
+cy[id]=k.length?Math.min(Math.max((cy[k[0]]+cy[k[k.length-1]])/2,top+n.h/2),top+H-n.h/2):top+H/2};
+let y=y0;RT.forEach(r=>{meas(r);put(r,y);y+=sh[r]+GT});
+const cw={},lb={};ids.forEach(n=>cw[LV[n.id]]=Math.max(cw[LV[n.id]]||0,n.w));
+S.edges.forEach(d=>{if(d.l&&LV[d.a]&&LV[d.b]){const l=Math.max(LV[d.a],LV[d.b]);lb[l]=Math.max(lb[l]||0,Math.max(...wrap(d.l,18).map(x=>x.length))*7.4+18)}});
+const cx={};let x=x0;for(let l=1;cw[l];l++){if(l>1)x+=lb[l]?lb[l]+60:90;cx[l]=x+cw[l]/2;x+=cw[l]}
+UND={s:S,p:{},e:S.edges.map(d=>[d,d.pa&&d.pa.slice(),d.pb&&d.pb.slice()])};
+const dl={};ids.forEach(n=>{UND.p[n.id]=[n.x,n.y];const nx=cx[LV[n.id]],ny=cy[n.id];dl[n.id]=[nx-n.x,ny-n.y];n.x=nx;n.y=ny});
+S.edges.forEach(d=>{if(d.a&&!d.b&&d.pb&&dl[d.a]){d.pb=[d.pb[0]+dl[d.a][0],d.pb[1]+dl[d.a][1]]}else if(!d.a&&d.b&&d.pa&&dl[d.b]){d.pa=[d.pa[0]+dl[d.b][0],d.pa[1]+dl[d.b][1]]}});
+$('bau').hidden=false;fit();draw();tip('▦ Ordenado: una columna por nivel')}
+function unArrange(){if(!UND||UND.s!==S)return tip('Nada que deshacer en este mapa');
+S.nodes.forEach(n=>{const p=UND.p[n.id];if(p){n.x=p[0];n.y=p[1]}});
+UND.e.forEach(([d,a,b])=>{if(S.edges.includes(d)){if(a)d.pa=a;if(b)d.pb=b}});
+UND=null;$('bau').hidden=true;draw();tip('Orden anterior restaurado')}
+$('bar').onclick=arrange;$('bau').onclick=unArrange;
+
+/* ---- 🌿 Rama (Estudiar): toca el FINAL de una rama (cuadro sin salidas); se enfoca el camino más corto hasta el tema (nivel 1) ---- */
+function LF(n){return!S.edges.some(d=>d.a==n.id&&d.b&&d.b!=n.id&&M(d.b))}
+function BRA(){return mode=='s'&&BRM&&BR&&BR.s===S?BR:null}
+function BK(n,ex){return!ex&&mode=='s'&&BRM&&(BRA()?BRA().set.has(n.id):LF(n))}
+function brPath(id){nums();const inc={};S.edges.forEach(d=>{if(d.a&&d.b&&d.a!=d.b&&M(d.a)&&M(d.b))(inc[d.b]=inc[d.b]||[]).push(d.a)});
+const pv={},q=[id];pv[id]=0;let f=null;
+for(let i=0;i<q.length&&f==null;i++){const c=q[i];if(LV[c]==1){f=c;break}(inc[c]||[]).slice().sort((x,y)=>(y==PAR[c])-(x==PAR[c])).forEach(p=>{if(!(p in pv)){pv[p]=c;q.push(p)}})}
+const P=[];if(f==null){let x=id,g=0;while(x&&g++<60){P.unshift(x);x=PAR[x]}return P}
+for(let x=f;x;x=pv[x])P.push(x);return P}
+function brTap(n){const b=BRA();
+if(LF(n)&&(!b||b.leaf!=n.id)){const p=brPath(n.id);BR={s:S,leaf:n.id,path:p,set:new Set(p),es:new Set(p.slice(1).map((x,i)=>p[i]+'>'+x))};AK=null;pph=0;if(RPM)rpNext();else{akr();draw(1)}tip('🌿 Rama elegida: '+p.length+' cuadros hasta el tema. Toca otro final para cambiar',3500);return 1}
+if(!b){tip('Toca el final de una rama (un cuadro sin salidas)');return 1}
+return!b.set.has(n.id)}
+function brInfo(b){const R=nums();return'<div style="font-size:13px;color:#475569">🌿 Rama · '+b.path.length+' cuadros (del tema al final)</div><div style="margin:6px 0;line-height:1.5">'+b.path.map(id=>{const m=M(id);return esc((R[id]||'')+' «'+(HH(m)?'···':((m.t||'').trim().slice(0,40)||'imagen o audio'))+'»')}).join('<br>↓<br>')+'</div><button id=abn>▶ Empezar rama</button>'}
+function nextB(){const b=BRA();if(!b)return;const P=b.path,i=AK?P.indexOf(AK.id):-1,o=P.slice(i+1).concat(P.slice(0,i+1)).map(M).filter(n=>n&&H(n)&&!n.r);
+if(!o.length)return tip('🌿 Rama terminada: no quedan cuadros ocultos');askA(o[0])}
+$('bbr').onclick=()=>{BRM=BRM?0:1;BR=null;if(RPM)rpNext();else{akr();draw(1)}tip(BRM?'🌿 Toca el final de una rama (un cuadro sin salidas)':'Modo rama apagado',3000)};
+
+/* ---- 🔔 Avisos de repaso: máximo 2 o 3 al día (solo se generan con la app abierta). Se guardan en este dispositivo. ---- */
+const NTH={2:[10,19],3:[9,15,20]};
+function ntl(){try{const o=JSON.parse(localStorage.mc_nt||'null');if(o&&o.list)return o}catch(e){}return{d:'',n:0,done:[],hrs:3,list:[]}}
+function nts(o){try{localStorage.mc_nt=JSON.stringify(o)}catch(e){}}
+function ntBadge(){const n=ntl().list.filter(x=>!x.r).length,b=$('nb');b.hidden=!n;b.textContent=n>9?'9+':n}
+function ntBeep(){try{navigator.vibrate&&navigator.vibrate([200,100,200])}catch(e){}try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.22].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;g.gain.value=.15;o.connect(g);g.connect(a.destination);o.start(a.currentTime+t);o.stop(a.currentTime+t+.15)});setTimeout(()=>a.close(),900)}catch(e){}}
+function ntStats(){const s0=S,b0=BRM,L=lib(),ms=Object.keys(L).map(k=>L[k]).filter(m=>m&&m.nodes),o=[],now=Date.now();if(S&&!ms.includes(S))ms.push(S);BRM=0;
+ms.forEach(m=>{S=m;try{const q=fsQ(now),F=fsd();let w=0;fsCards().forEach(n=>{const c=F.c[n.id];if(c&&c.w)w++});const t=q.n.length+q.l.length+q.la.length+q.r.length;if(t)o.push({k:m.name,t,n:q.n.length,l:q.l.length+q.la.length,r:q.r.length,w})}catch(e){}});
+S=s0;BRM=b0;nums();return o}
+function ntCheck(quiet){const o=ntl(),d=new Date(),dk=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(),H=NTH[o.hrs]||NTH[3];
+if(o.d!=dk){o.d=dk;o.done=[];o.n=0}
+const hr=d.getHours()+d.getMinutes()/60;let sl=-1;H.forEach((h,i)=>{if(hr>=h)sl=i});
+if(sl<0||o.done.includes(sl)||(o.n||0)>=H.length){nts(o);return}
+const st=ntStats().sort((a,b)=>b.t-a.t),t=st.reduce((a,x)=>a+x.t,0);if(!t){nts(o);return}
+const sm=k=>st.reduce((a,x)=>a+x[k],0),w=sm('w'),c=t+' cuadro'+(t==1?'':'s'),first=!o.n,last=!first&&sl==H.length-1;
+const x=first?'🧠 Hoy tienes '+c+' por repasar: 🆕 '+sm('n')+' · 📖 '+sm('l')+' · 🔁 '+sm('r'):last?'🌙 Último repaso del día: te faltan '+c+(w?' ('+w+' en rojo)':''):'⏰ Aún te faltan '+c+' por repasar'+(w?' ('+w+' en rojo)':'');
+for(let i=0;i<=sl;i++)if(!o.done.includes(i))o.done.push(i);o.n=(o.n||0)+1;
+o.list.unshift({id:Date.now(),t:Date.now(),x:x+(st.length>1?'\n'+st.map(y=>y.k+': '+y.t).join(' · '):''),k:st[0].k,r:0});o.list=o.list.slice(0,30);nts(o);ntBadge();if(!quiet)ntBeep()}
+const ntAgo=t=>{const m=Math.round((Date.now()-t)/6e4);return m<1?'ahora':m<60?'hace '+m+' min':m<1440?'hace '+Math.round(m/60)+' h':'hace '+Math.round(m/1440)+' d'};
+function ntShow(){const o=ntl();
+$('ntl').innerHTML=o.list.length?o.list.map(x=>'<div class=nti'+(x.r?'':' style="background:#fef2f2"')+'><div style="white-space:pre-line">'+esc(x.x)+'</div><small>'+ntAgo(x.t)+'</small></div>').join(''):'<i style="color:#64748b">Sin avisos todavía. Te aviso '+o.hrs+' veces al día si tienes tarjetas pendientes y la app está abierta.</i>';
+$('nth').value=o.hrs;o.list.forEach(x=>x.r=1);nts(o);ntBadge();$('dnt').showModal()}
+$('bnt').onclick=ntShow;$('ntx').onclick=()=>$('dnt').close();$('dnt').onclick=e=>{if(e.target==$('dnt'))$('dnt').close()};
+$('nth').onchange=()=>{const o=ntl();o.hrs=+$('nth').value;o.done=[];nts(o)};
+$('ntc').onclick=()=>{const o=ntl();o.list=[];nts(o);ntBadge();ntShow()};
+$('ntt').onclick=()=>{const o=ntl();o.list.unshift({id:Date.now(),t:Date.now(),x:'🔔 Aviso de prueba: así te recordaré repasar',k:'',r:0});nts(o);$('dnt').close();ntBadge();ntBeep()};
+$('ntr').onclick=()=>{$('dnt').close();const st=ntStats().sort((a,b)=>b.t-a.t),L=lib(),m=st[0]&&L[st[0].k];if(m&&m!==S){S=m;fix();sel=selE=null;save();draw(1);fit()}$('bx').checked=true;$('bx').onchange()};
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)ntCheck()});setInterval(ntCheck,6e4);
 $('bsa').onclick=()=>{S.nodes.forEach(n=>n.r=1);draw()};
 $('bha').onclick=()=>{S.nodes.forEach(n=>n.r=0);draw()};
-$('bx').onchange=()=>{mode=$('bx').checked?'s':'e';link=0;qc=0;sel=selE=null;S.nodes.forEach(n=>n.r=0);document.body.classList.toggle('s',mode=='s');draw();if(mode=='s')tip('Toca un cuadro para revelar su texto')};
+$('bx').onchange=()=>{BRM=0;BR=null;mode=$('bx').checked?'s':'e';link=0;qc=0;sel=selE=null;AK=null;pph=0;S.nodes.forEach(n=>n.r=0);document.body.classList.toggle('s',mode=='s');RPM=mode=='s'?1:0;if(RPM){rpNext();tip('🧠 Repasar: el cuadro con borde naranja es el que toca',3500)}else{akr();draw()}};
 $('zi').onclick=()=>zb(1.2);$('bfit').onclick=()=>{fit();tip('Vista general: todos tus cuadros')};$('zo').onclick=()=>zb(1/1.2);
 
 function av(){$('bpa').hidden=$('bqa').hidden=!ta}
@@ -325,6 +443,106 @@ $('bk').onclick=()=>{const E=t=>esc(t||'').replace(/\n/g,'<br>').replace(/\t/g,'
 S.nodes.forEach(a=>{if(!a.t)return;const c=S.edges.filter(d=>d.a==a.id).map(d=>M(d.b)).filter(b=>b&&b.t);if(c.length)R.push([E(a.t),c.map(b=>(c.length>1?'• ':'')+E(b.t)).join('<br>'),S.name.replace(/\s+/g,'_')].join('\t'))});
 if(!R.length)return tip('Necesitas cuadros con texto y conectados');
 dl(fn('-anki.txt'),new Blob(['#separator:tab\n#html:true\n#tags column:3\n'+R.join('\n')],{type:'text/plain;charset=utf-8'}))};
+/* ---- 🧠 Repasar con FSRS-6 (reemplaza por completo al SM-2). Cada cuadro con contenido es una tarjeta. ---- */
+const FW=[0.212,1.2931,2.3065,8.2956,6.4133,0.8334,3.0194,0.001,1.8722,0.1666,0.796,1.4835,0.0614,0.2629,1.6483,0.6014,1.8729,0.5425,0.0912,0.0658,0.1542],
+FD=-FW[20],FF=Math.pow(.9,1/FD)-1,FLS=[1,10],FRS=[10],
+fR=(t,s)=>Math.pow(1+FF*t/s,FD),fcl=d=>Math.min(10,Math.max(1,d)),fD0=g=>FW[4]-Math.exp(FW[5]*(g-1))+1;
+function fDay(now,k){const d=new Date(now);d.setHours(0,0,0,0);d.setDate(d.getDate()+k);return d.getTime()}
+/* tarjeta: s estado (0 nueva,1 aprendiendo,2 repaso,3 reaprendiendo) · d dificultad · t estabilidad · u próxima fecha · l último repaso · p paso · n repasos · f olvidos */
+function fsNext(c,g,now,rt){const w=FW;c=c||{s:0};const dt=c.l?Math.max(0,(now-c.l)/864e5):0;let St,D;
+if(!c.s){St=Math.max(.001,w[g-1]);D=fcl(fD0(g))}
+else{const R=fR(dt,c.t);D=fcl(w[7]*fcl(fD0(4))+(1-w[7])*(c.d-w[6]*(g-3)*(10-c.d)/9));
+if(dt<1){const k=Math.exp(w[17]*(g-3+w[18]))*Math.pow(c.t,-w[19]);St=c.t*(g>2?Math.max(k,1):k)}
+else if(g==1)St=Math.min(w[11]*Math.pow(c.d,-w[12])*(Math.pow(c.t+1,w[13])-1)*Math.exp((1-R)*w[14]),c.t/Math.exp(w[17]*w[18]));
+else St=c.t*(1+Math.exp(w[8])*(11-c.d)*Math.pow(c.t,-w[9])*(Math.exp((1-R)*w[10])-1)*(g==2?w[15]:1)*(g==4?w[16]:1));
+St=Math.max(.001,St)}
+const x={s:0,d:D,t:St,l:now,n:(c.n||0)+1,f:c.f||0,p:0,u:0,k:0,w:g==1?1:0},cur=c.s||0,stp=cur==3?FRS:FLS,sp=(cur==1||cur==3)?(c.p||0):0,L=stp.length,ls=cur==3?3:1;let m=null;
+if(cur==2){x.s=2;if(g==1){x.f++;if(FRS.length){x.s=3;m=FRS[0]}}}
+else if(g==1){x.s=ls;m=stp[0]}
+else if(g==2){x.s=ls;x.p=sp;m=sp==0?(L==1?stp[0]*1.5:(stp[0]+stp[1])/2):stp[sp]}
+else if(g==3){if(sp+1>=L)x.s=2;else{x.s=ls;x.p=sp+1;m=stp[sp+1]}}
+else x.s=2;
+if(m==null){x.s=2;x.k=Math.min(36500,Math.max(1,Math.round(St/FF*(Math.pow(rt||.9,1/FD)-1))));x.u=fDay(now,x.k)}else x.u=now+m*6e4;
+return x}
+function fsAll(c,now,rt){const o=[1,2,3,4].map(g=>fsNext(c,g,now,rt));
+if(o[1].k&&o[2].k&&o[3].k){const h=Math.min(o[1].k,o[2].k),g=Math.max(o[2].k,h+1),e=Math.max(o[3].k,g+1);[h,g,e].forEach((k,i)=>{o[i+1].k=k;o[i+1].u=fDay(now,k)})}
+return o}
+function fFmt(m){if(m<1)return'<1 min';if(m<60)return Math.round(m)+' min';const h=m/60;if(h<24)return Math.round(h)+' h';const d=h/24;if(d<30)return Math.round(d)+' d';const z=(d<365?d/30.4:d/365).toFixed(1).replace('.',',').replace(',0','');return z+(d<365?' mes':' años')}
+const fLab=(x,now)=>x.k?fFmt(x.k*1440):fFmt((x.u-now)/6e4);
+function fsd(){if(!S.fs){const F=S.fs={c:{},r:.9},o=S.srs;if(o){Object.keys(o).forEach(k=>{const r=o[k],n=M(k.slice(1));if(!n||!r||!(r.r>0))return;const iv=Math.max(1,r.i||1),u=(r.d||0)*864e5;F.c[n.id]={s:2,d:fcl(5+(2.5-(r.e||2.5))*4),t:iv,u,l:u-iv*864e5,p:0,n:r.r,f:0}});delete S.srs}}return S.fs}
+const CD=n=>!n.f&&(n.t||n.i||n.a||n.u);
+function fsCards(){nums();const o=[],b=BRA(),f=id=>{o.push(id);(KID[id]||[]).forEach(f)};RT.forEach(f);return o.map(M).filter(n=>n&&CD(n)&&(!b||b.set.has(n.id)))}
+function fsQ(now){const F=fsd(),l=[],r=[],nw=[],la=[];fsCards().forEach(n=>{const c=F.c[n.id];if(!c||!c.s)nw.push(n);else if(c.s==2){if(c.u<=now)r.push([fR(Math.max(0,(now-c.l)/864e5),c.t),n])}else if(c.u<=now)l.push([c.u,n]);else if(c.u<=now+12e5)la.push([c.u,n])});
+const s=a=>a.sort((x,y)=>x[0]-y[0]).map(x=>x[1]);return{l:s(l),r:s(r),n:nw,la:s(la)}}
+function RPF(n,ex){if(ex||!RPM||BRM||mode!='s'||!HH(n)||!CD(n))return'';const c=fsd().c[n.id];return c&&c.w?'#fca5a5':(!c||!c.s||c.u<=Date.now())?'#d1d5db':''}
+function AKH(n){return mode=='s'&&AK&&AK.id==n.id}
+function rpFocus(n){const r=cv.getBoundingClientRect(),k=S.v.k,wide=innerWidth>480,pw=wide?Math.min(250,.64*innerWidth):0,ph=wide?0:244,sx=n.x*k+S.v.x,sy=n.y*k+S.v.y,hw=(n.w||100)*k/2+30,hh=(n.h||50)*k/2+30;
+if(sx-hw<0||sx+hw>r.width-pw||sy-hh<0||sy+hh>r.height-ph){S.v.x=(r.width-pw)/2-n.x*k;S.v.y=(r.height-ph)/2-n.y*k;view()}}
+function rpNext(){pph=0;const q=fsQ(Date.now()),n=q.l[0]||q.r[0]||q.n[0]||q.la[0];
+AK=n?{id:n.id,st:0,c:q.l[0]?'l':q.r[0]?'r':q.n[0]?'n':'l'}:null;if(n)rpFocus(n);akr();draw()}
+function askA(n){AK={id:n.id,st:0,c:''};pph=0;akr();draw()}
+const rsH=()=>'<label style="display:block;margin-top:8px;font-size:13px">Retención deseada <select class=rsel>'+[.8,.85,.9,.95].map(v=>'<option value='+v+((fsd().r||.9)==v?' selected':'')+'>'+Math.round(v*100)+'%</option>').join('')+'</select></label>';
+function fCnt(c){const q=fsQ(Date.now()),ln=q.l.length+q.la.length,t=q.n.length+ln+q.r.length,u=(k,col,lb,v)=>'<span style="color:'+col+'">'+lb+' '+(c==k?'<b>'+v+'</b>':v)+'</span>';
+return'<div style="font-size:16px;margin-bottom:3px"><b>'+(t?'Te faltan '+t+' cuadro'+(t==1?'':'s'):'Todo contestado')+'</b></div><div class=cn>'+u('n','#2563eb','Nuevos',q.n.length)+u('l','#dc2626','Aprendiendo',ln)+u('r','#16a34a','Repasar',q.r.length)+'</div>'+(RPM&&!BRM?'<div style="font-size:11px;color:#475569;margin-bottom:5px">⬜ gris: por contestar · 🟥 rojo: fallado, te insisto</div>':'')}
+function rpEnd(){const F=fsd(),now=Date.now();let nx=0;fsCards().forEach(n=>{const c=F.c[n.id];if(c&&c.s&&c.u>now&&(!nx||c.u<nx))nx=c.u});
+return fCnt('')+'<div style="font-size:18px;margin:6px 0">🎉 ¡Listo por ahora!</div><div style="font-size:14px;color:#475569">'+(nx?'Próximo repaso en '+fFmt((nx-now)/6e4)+'.':'No hay tarjetas pendientes.')+'</div>'+rsH()+'<button id=arx>🔄 Revisar de nuevo</button>'}
+function akr(){const o=$('ank');if(AK&&!M(AK.id))AK=null;const n=AK&&M(AK.id);
+if(!n){if(RPM&&mode=='s')o.innerHTML=rpEnd();else{const b=BRA();o.innerHTML=b?brInfo(b):'<i>Toca un cuadro que diga «Concepto oculto» y aquí te hago la pregunta.</i>'}return}
+const R=nums(),p=PAR[n.id],e=p&&S.edges.find(d=>d.a==p&&d.b==n.id),lv=R[n.id]=='1'?1:+((String(R[n.id]).match(/(\d+)\./)||[0,1])[1]);
+const ch=[];let x=p&&PAR[p],g=0;while(x&&g++<40){ch.unshift(x);x=PAR[x]}
+const nm=(id,f)=>{const m=M(id);return(R[id]||'')+' «'+((!f&&HH(m))?'···':((m.t||'').trim().slice(0,70)||'imagen o audio'))+'»'};
+let s=fCnt(AK.c)+'<div style="color:#475569;font-size:13px">Nivel '+lv+' · '+esc(R[n.id]||'')+'</div>';
+if(ch.length)s+='<div style="color:#64748b;font-size:12px;margin-top:2px">'+esc(ch.map(i=>nm(i)).join(' → '))+'</div>';
+s+=p?'<div style="font-size:17px;margin:8px 0">'+esc(nm(p,1))+'<br>— '+esc((e&&e.l)||'…')+' →<br><b>¿?</b></div>':'<div style="font-size:17px;margin:8px 0"><b>¿Cuál es el tema principal del mapa?</b></div>';
+if(AK.st==0)s+='<button id=aks>👁 Mostrar respuesta</button>';
+else if(AK.st==1){const F=fsd(),now=Date.now(),A=fsAll(F.c[n.id],now,F.r||.9);s+='<div style="background:#f1f5f9;border-radius:8px;padding:8px;margin:6px 0;white-space:pre-wrap">'+esc((n.t||'').trim()||'(imagen o audio)')+'</div><div class=rb>'+['Otra vez','Difícil','Bien','Fácil'].map((t,i)=>'<button class=q'+(i+1)+' data-q='+(i+1)+'>'+t+'<small>'+fLab(A[i],now)+'</small></button>').join('')+'</div>'}
+else s+='<div style="margin:8px 0">'+esc(AK.msg||'')+'</div><i>Toca otro «Concepto oculto» para seguir.</i>'+(BRA()?'<button id=abn>➡ Siguiente de la rama</button>':'');
+o.innerHTML=s}
+function rateA(g){const n=M(AK.id),F=fsd(),now=Date.now(),x=fsAll(F.c[n.id],now,F.r||.9)[g-1];delete x.k;F.c[n.id]=x;if(RPM||g==1)n.r=0;save();
+if(RPM){if(g==1)tip('🔴 Te lo vuelvo a preguntar en '+fFmt((x.u-now)/6e4),3000);rpNext();return}AK.st=2;AK.msg='Próximo repaso en '+fFmt((x.u-now)/6e4)+'.';akr();draw()}
+$('ank').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id=='abn')return nextB();if(b.id=='arx')return rpNext();if(!AK)return;if(b.id=='aks'){AK.st=1;M(AK.id).r=1;akr();draw();return}if(b.dataset.q)rateA(+b.dataset.q)};
+addEventListener('change',e=>{if(e.target.matches&&e.target.matches('.rsel')){fsd().r=+e.target.value;save()}});
+$('brp').onclick=()=>{if(mode!='s')return;RPM=RPM?0:1;AK=null;S.nodes.forEach(n=>n.r=0);if(RPM)rpNext();else{akr();draw()}tip(RPM?'🧠 Repasar activado':'Estudio libre: toca un «Concepto oculto»',2500)};
+function rpAsk(){if(!fsCards().length)return;const q=fsQ(Date.now()),t=q.l.length+q.r.length+q.n.length;
+$('drt').innerHTML=t?'Tienes <b>'+t+'</b> tarjeta'+(t==1?'':'s')+' para hoy:<br>🆕 '+q.n.length+' nuevas · 📖 '+q.l.length+' en aprendizaje · 🔁 '+q.r.length+' por repasar':'No tienes tarjetas pendientes por ahora 🎉';
+$('drs').innerHTML=rsH();$('dry').hidden=!t;$('drn').textContent=t?'Ahora no':'Cerrar';$('dr').showModal()}
+$('dry').onclick=()=>{$('dr').close();$('bx').checked=true;$('bx').onchange()};$('drn').onclick=()=>$('dr').close();
+akr();
+/* ---- HERICONE: sistema de Hérigone / "mayor" adaptado al español. Número → sonidos → palabras concretas ---- */
+const HW='oso gato pato pavo rata mono vaca toro lobo lama loro mula cerdo oveja cabra burro zorro tigre león cebra foca morsa nutria ardilla conejo ratón araña abeja mosca hormiga grillo gusano caracol sapo rana tortuga lagarto culebra serpiente pulpo calamar cangrejo ballena delfín tiburón gallina gallo pollo pájaro águila búho cisne ganso cuervo paloma pingüino camello venado ciervo caballo potro yegua cabrito perro pez mariposa zancudo mosquito cucaracha oruga pulga ciempiés escarabajo cóndor flamenco pelícano tucán canario halcón gaviota jabalí koala panda gorila jirafa elefante cocodrilo medusa almeja ostra langosta camarón sardina atún trucha salmón anguila mano dedo pie pierna rodilla codo brazo hombro cabeza cara ojo oreja nariz boca diente lengua labio cuello pecho espalda barriga ombligo uña pelo barba ceja pestaña muela hueso piel pulgar tobillo talón muñeca puño cadera corazón cerebro riñón pulmón casa mesa silla cama sofá puerta ventana techo pared piso suelo cocina baño sala escalera lámpara foco vela espejo cuadro cortina alfombra almohada sábana manta colchón armario cajón estante repisa llave candado cerradura timbre buzón reja portón jardín patio balcón terraza chimenea estufa horno nevera licuadora tostadora cafetera olla sartén cuchara tenedor cuchillo plato vaso taza copa jarra botella tapa colador rallador mantel servilleta escoba cubeta balde jabón esponja toalla cepillo peine tijeras aguja hilo botón cierre cinturón camisa camiseta pantalón falda vestido abrigo chaqueta suéter bufanda gorro gorra sombrero guante calcetín media zapato bota sandalia tenis chancla pijama bata corbata traje bolsillo bolso mochila maleta cartera paraguas anillo collar pulsera reloj arete lente gafas pan queso leche huevo carne jamón tocino salchicha arroz frijol lenteja sopa tamal taco torta pizza pastel galleta dulce chocolate helado paleta miel azúcar sal pimienta aceite vinagre manzana pera uva fresa mango piña plátano naranja limón sandía melón durazno ciruela cereza coco papaya aguacate tomate cebolla ajo papa zanahoria lechuga pepino calabaza maíz elote chile pimiento rábano nabo apio col brócoli espinaca nuez almendra cacahuate café té jugo refresco cerveza vino agua hielo sol luna estrella nube lluvia nieve viento rayo trueno cielo mar río lago laguna playa arena roca piedra montaña cerro volcán cueva valle isla bosque selva campo prado árbol rama hoja raíz tronco flor rosa tulipán margarita girasol cactus pasto hierba semilla fruta hongo musgo fuego humo ceniza carbón lava tierra barro lodo charco cascada puente auto coche carro camión moto bicicleta tren avión barco bote lancha yate taxi autobús metro cohete globo helicóptero patineta rueda llanta volante freno motor tanque semáforo calle carretera camino túnel martillo clavo tornillo tuerca pinza alicate sierra taladro lima pala pico rastrillo hacha cuerda cadena soga pegamento cinta lápiz pluma pincel pintura borrador regla compás libro cuaderno papel carta sobre sello tarjeta mapa teléfono celular radio televisión pantalla cable enchufe pila batería cámara foto disco control teclado bocina micrófono audífono antena bandera corona trono espada escudo lanza flecha arco castillo torre muro cofre tesoro moneda billete dado naipe pelota balón red portería bate cancha pista medalla trofeo silbato tambor guitarra piano violín flauta trompeta campana piñata payaso muñeca peluche cometa trompo yoyo mono nido lado lata pala palma bala bola tela vela sala ala ola uva lima lana luna cola copa tapa pipa papa pan pino puño peña pelo piel pie pelota rueda rodilla rama remo rey ropa risa rizo rosa raíz rojo reja rifa dedo dado dama dama dos dia dedal dátil teja tinta techo tela tubo taza tos tiza tía toalla tren trigo tuna tina nube nido nata nave nuez nariz nene niño nena nuca nudo nieve nutria mesa mina mapa mago malla mano mapa masa mata mía miel mimo moño mochila moda moco mula muro musgo sauce seso asno cena cine zumo cima tofu ñame nuera enero anafe aurora rorro rulo lazo luz alas losa lila lulo elfo alfiler alfombra yeso china genio jinete yema gema llama jefe chef cono cuna caña foso fosa faz faro feria fiera fila filo ficha faja fuelle fajo fofo puma pomo bufo fémur mofeta chimenea reloj nilo nalga alce armadillo avestruz bisonte búfalo cachorro camaleón canguro chacal chimpancé chinchilla cobra comadreja coyote erizo gacela garza gamo gorrión golondrina grulla guacamayo hiena iguana jaguar lémur leopardo libélula liebre lince lechuza lombriz mapache mamut marmota mirlo ñandú orangután pantera perdiz petirrojo pitón quetzal reno ruiseñor sabueso salamandra sanguijuela tapir tarántula tejón tordo urraca vampiro vicuña zángano zopilote zorrillo arepa atole batido bizcocho bollo burrito caldo canela caramelo cebada chicle chorizo churro croqueta empanada ensalada espagueti fideo flan frambuesa gelatina hamburguesa harina hígado jarabe jengibre kiwi lasaña lechón mantequilla mermelada mole mostaza nachos nopal pasta pepita pozole puré quesadilla salsa tarta tortilla tostada turrón vainilla yogur abanico agujero ancla antorcha arpa bidón bisagra bolígrafo bomba bombilla brújula brocha canasta cantimplora carretilla cazuela cerillo dedal embudo engrane estaca etiqueta fogata fósforo gancho garrote grifo grapa guadaña hamaca hebilla herradura hoguera hoz jaula jeringa linterna lupa maceta mástil mecate mecha molino navaja ocarina palillo panal parche pasador pergamino pesa pestillo petate pistola pito pizarra plumero poste prensa puñal resorte rifle rodillo rollo rueca ruleta sombrilla soplete tabla tablero taburete tapete tarro tejado telaraña tenaza termo tetera tienda timón tina tinaja tintero tirante tobogán trampa trapo trineo tubo urna valija vara varilla veleta venda ventilador yunque zanco zarpa abuelo abuela bebé bruja caballero campesino cartero cocinero doctor enfermera ladrón mago maestro marinero minero obrero pescador pintor pirata policía princesa reina soldado vaquero viejo niña muñeco monja ángel diablo fantasma monstruo dragón unicornio sirena gigante duende momia robot banco parque plaza iglesia escuela hospital tienda mercado cine teatro museo hotel granja faro muelle puerto estación gasolinera panadería farmacia biblioteca cárcel palacio pirámide estatua fuente columna bandeja cucharita molde mortero freidora balanza regadera manguera florero cojín perchero ropero zapatero tendedero lavadora secadora plancha aspiradora cesto basurero papelera calendario agenda grapadora clip chincheta sacapuntas goma crayón marcador tiza pupitre lonchera raqueta patín esquí piscina trampolín columpio resbaladilla barrilete rompecabezas ajedrez dominó lotería jeringa venda curita pastilla termómetro muleta bastón tacón plantilla cordón calzón chaleco bikini chaparrón rocío neblina niebla escarcha granizo huracán tormenta tornado relámpago aurora ocaso amanecer isla delta duna dunas oasis pantano arrecife coral concha caracola perla erizo sopa mesa meta mina moto mimo mapa masa mosca mono mula mazo moño mecha medalla mueble muñeca muro música mundo madera marco margarita mariposa mejilla mono nuez neta ñoño ojal oca olmo olla onza oreja oro oso ostra ovillo pala palo palma pan panza pañal paño papel parra pasta pata pecho pega peine pelota pera perla pesa pez pico pie pila pino pipa piso plata playa pluma poza pozo prado puerta pulga puma punta rata ratón raya red remo reno resma rey rima rizo roca rodaja rollo ropa rosal rueda rulo saco sal salsa sapo sarten seda sello sien sierra sifón silla sobre sofá sol sombra soga suero sueter taco talco tapa taza techo tela tenis tiara tigre timbre tiza toalla tocino tomate torre tos trapo tren trigo trompa tubo tumba uña urna vaca vaso vela vena venda ventana vestido vidrio vino viola vela yate yoyo zapato zarza zorro zurdo';
+const hc=w=>w.toLowerCase().replace(/gü/g,'gw').normalize('NFD').replace(/[\u0300-\u0302\u0304-\u036f]/g,'').normalize('NFC').replace(/ch|ll/g,'6').replace(/rr/g,'4').replace(/qu|gw/g,'7').replace(/gu(?=[ei])/g,'7').replace(/g(?=[ei])/g,'6').replace(/c(?=[ei])/g,'0').replace(/[ckqg]/g,'7').replace(/x/g,'70').replace(/y(?=[aeiou])/g,'6').replace(/[szZ]/g,'0').replace(/[td]/g,'1').replace(/[nñ]/g,'2').replace(/m/g,'3').replace(/r/g,'4').replace(/l/g,'5').replace(/j/g,'6').replace(/f/g,'8').replace(/[pbv]/g,'9').replace(/\D/g,'');
+const LX={};let HD={a:[],x:[]};
+function bld(){for(const k in LX)delete LX[k];HW.split(/\s+/).concat(HD.a).forEach(w=>{if(!w||HD.x.includes(w))return;const c=hc(w);if(c.length>1&&c.length<5&&!(LX[c]||(LX[c]=[])).includes(w))LX[c].push(w)})}bld();
+function hsave(){bld();if(DBH)idbTx('readwrite',(s,m)=>m.put(JSON.parse(JSON.stringify(HD)),'hdict')).catch(()=>{});try{localStorage.mc_hd=JSON.stringify(HD)}catch(e){}}
+function dwshow(){const v=$('dwi').value.trim(),o=$('dwo');
+if(!v){o.innerHTML='<i>Escribe un <b>número</b> para ver y quitar sus palabras, o una <b>palabra</b> para añadirla.</i>';return}
+if(/^\d+$/.test(v)){const a=LX[v]||[];o.innerHTML=a.length?a.map(w=>'<span class=hw>'+esc(w)+' <b data-x="'+esc(w)+'" style="color:#dc2626;cursor:pointer;padding:0 4px">✕</b></span>').join(''):'Sin palabras para '+esc(v);return}
+const c=hc(v),has=(LX[c]||[]).some(w=>nz(w)==nz(v));o.innerHTML='«'+esc(v)+'» suena a <b>'+(c||'nada')+'</b>'+(c.length<2||c.length>4?'. Usa palabras de 2 a 4 sonidos.':has?'. Ya está en el diccionario.':'<div class=r><button type=button id=dwa>➕ Añadir a '+c+'</button></div>')}
+$('dwi').oninput=dwshow;
+$('dwo').onclick=e=>{const x=e.target.closest('[data-x]');
+if(x){const w=x.dataset.x;if(HD.a.includes(w))HD.a=HD.a.filter(y=>y!=w);else HD.x.push(w);hsave();dwshow();return}
+if(e.target.closest('#dwa')){const w=$('dwi').value.trim().toLowerCase();HD.x=HD.x.filter(y=>nz(y)!=nz(w));if(!HW.split(/\s+/).some(y=>nz(y)==nz(w))&&!HD.a.some(y=>nz(y)==nz(w)))HD.a.push(w);hsave();tip('Añadida: '+w);dwshow()}};
+$('dwr').onclick=()=>{HD.x=[];hsave();tip('Palabras quitadas restauradas');dwshow()};
+const A1=['oso','té','uña','humo','oro','ala','ojo','oca','(sonido f)','ave'],pick=(a,n)=>a.slice().sort(()=>Math.random()-.5).slice(0,n),nz=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+function hsplit(n){const o=[];while(n.length){let k=Math.min(4,n.length),w=null;for(;k>=2;k--){const a=LX[n.slice(0,k)];if(a){w=a[Math.random()*a.length|0];break}}if(!w){k=1;w=A1[+n[0]]}o.push(w+' ('+n.slice(0,k)+')');n=n.slice(k)}return o.join(' + ')}
+function hshow(){const n=$('dhi').value.replace(/\D/g,''),o=$('dho');$('dhi').value=n;
+if(!n){o.innerHTML='<i>Escribe un número y verás palabras para imaginar.</i>';return}
+const a=LX[n];o.innerHTML=n.length==1?'<span class=hw>'+A1[+n]+'</span>':a?pick(a,8).map(w=>'<span class=hw>'+esc(w)+'</span>').join(''):'<div>Sin palabra común para '+n+'. Divídelo así:</div><div class=hw style="display:block;margin-top:6px">'+esc(hsplit(n))+'</div>'}
+function openHer(){let s={d:2,n:10,x:2};try{s=Object.assign(s,JSON.parse(localStorage.mc_hr||'{}'))}catch(e){}
+$('hqd').value=s.d;$('hqn').value=s.n;$('hqx').value=s.x;hTab(1);if(!$('dh').open)$('dh').showModal();hshow()}
+function hTab(t){$('dhd').hidden=t!=1;$('dhq').hidden=t!=2;$('dhw').hidden=t!=3;if(t==3)dwshow();if(t==2){$('hqc0').hidden=0;$('hqb').hidden=1;$('hqz').innerHTML=''}}
+let HQ=null;
+function hstart(){const s={d:+$('hqd').value,n:+$('hqn').value,x:+$('hqx').value};try{localStorage.mc_hr=JSON.stringify(s)}catch(e){}
+const used=new Set(),R=[];for(let i=0;i<s.n;i++){const L=s.d||2+(Math.random()*3|0);let p=Object.keys(LX).filter(k=>k.length==L&&!used.has(k));if(!p.length)p=Object.keys(LX).filter(k=>k.length==L);const q=p[Math.random()*p.length|0];used.add(q);R.push({q,a:'',ok:0})}
+HQ={s,R,i:0,f:0,u:new Set()};$('hqc0').hidden=1;$('hqb').hidden=0;hq()}
+function hq(){const r=HQ.R[HQ.i];$('hqp').innerHTML='Pregunta '+(HQ.i+1)+' de '+HQ.R.length+'<br><b style="font-size:30px;letter-spacing:3px">'+r.q+'</b>';$('hqa').value='';$('hqf').textContent='';$('hqk').textContent='Comprobar';HQ.f=0;$('hqa').focus()}
+function hnext(){if(!HQ)return;if(!HQ.f){const w=$('hqa').value.trim();if(!w)return;const r=HQ.R[HQ.i];r.a=w;r.c=hc(w);r.ok=r.c==r.q;HQ.u.add(nz(w));r.e=HQ.s.x?pick((LX[r.q]||[]).filter(v=>!HQ.u.has(nz(v))),HQ.s.x):[];$('hqf').innerHTML=(r.ok?'✅ Correcto':'❌ «'+esc(w)+'» suena a <b>'+(r.c||'nada')+'</b>, no a <b>'+r.q+'</b>')+(r.e.length?'<br><i>otras palabras:</i> '+r.e.map(esc).join(', '):'');HQ.f=1;$('hqk').textContent=HQ.i+1<HQ.R.length?'Siguiente':'Ver resultado';return}
+if(++HQ.i<HQ.R.length)return hq();
+const R=HQ.R,x=HQ.s.x,used=new Set(R.map(r=>nz(r.a))),ok=R.filter(r=>r.ok).length;$('hqb').hidden=1;
+$('hqz').innerHTML='<b style="font-size:18px">'+ok+' de '+R.length+' correctas</b>'+R.map(r=>{const e=r.e||[];return'<div style="margin-top:8px"><b>'+r.q+'</b> '+(r.ok?'✅':'❌')+' tú: '+esc(r.a)+(e.length?'<br><i>otras:</i> '+e.map(esc).join(', '):'')+'</div>'}).join('')+'<div class=r><button type=button id=hqs2>🔁 Practicar otra vez</button></div>';$('hqs2').onclick=()=>hTab(2);HQ=null}
+$('bh').onclick=openHer;$('dhx').onclick=()=>$('dh').close();$('dht1').onclick=()=>hTab(1);$('dht2').onclick=()=>hTab(2);$('dht3').onclick=()=>hTab(3);
+$('dhi').oninput=hshow;$('dhr').onclick=hshow;$('hqs').onclick=hstart;$('hqk').onclick=hnext;$('hqa').onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();hnext()}};
+try{localStorage.removeItem('mc_ia');localStorage.removeItem('mc_ai')}catch(e){}
 function openUrl(u){u=(u||'').trim();if(!/^[a-z][a-z0-9+.-]*:/i.test(u))u='https://'+u;if(!/^(https?|mailto|tel):/i.test(u))return tip('Solo se permiten enlaces http, https, mailto o tel');const a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener';a.click()}
 $('bsh').onclick=()=>{const n=M(sel);if(!n)return tip('Selecciona un cuadro');
 const c=S.edges.filter(d=>d.a==n.id).map(d=>M(d.b)).filter(b=>b&&b.t).map(b=>b.t),pr=S.edges.filter(d=>d.b==n.id).map(d=>M(d.a)).find(b=>b&&b.t);
@@ -387,7 +605,7 @@ let PD=[],pdm=0,pph=0,ppk='';
 try{PD=JSON.parse(ls('mc_pd')||'null')}catch(e){}
 if(!Array.isArray(PD)||!PD.length)PD=['es','sirve para','es un','forma parte de','se divide en','produce','genera','se diferencia'];
 const svPD=()=>{try{localStorage.mc_pd=JSON.stringify(PD)}catch(e){}};
-function ppu(){const v=mode=='e'&&!pph&&(qc||selE!=null);document.body.classList.toggle('pp',v);if(!v)return;
+function ppu(){const st=mode=='s',v=st?((!!AK||!!BRA()||!!RPM)&&!pph):(mode=='e'&&!pph&&(qc||selE!=null));document.body.classList.toggle('pp',v);$('ppt').textContent=st?'🧠 Repasar':'Conexiones';if(!v||st)return;
 const d=S.edges[selE],l=(d&&d.l)||'',kk=PD.join('\u0001')+'\u0002'+l+'\u0002'+pdm;if(kk===ppk)return;ppk=kk;
 $('ppl').innerHTML=PD.map((w,i)=>`<button type=button data-w="${i}"${w==l?' class=on':''}>${esc(w)}</button>`).join('');
 if(document.activeElement!==$('ppi'))$('ppi').value=l}
@@ -432,6 +650,6 @@ if(R.length){R[0].t=R[0].t.replace(/^\s+/,'');R[R.length-1].t=R[R.length-1].t.re
 const rr=R.filter(r=>r.t);return{t:rr.map(r=>r.t).join(''),rt:rr}}
 
 initStore().then(function(){const L=lib();S=L[CUR];if(S&&S.nodes)fix();else{S={name:'Mi mapa',c:0,nodes:[],edges:[]};fix();sel=mk(0,0).id}
-cv.insertAdjacentHTML('afterbegin',DEFS);draw();fit()});
+cv.insertAdjacentHTML('afterbegin',DEFS);draw();fit();rpAsk();ntBadge();ntCheck(1)});
 if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script></body></html>
