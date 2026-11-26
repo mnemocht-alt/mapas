@@ -75,6 +75,11 @@ footer [hidden],header [hidden]{display:none!important}
 #dnt{margin:64px auto auto 8px;width:min(92vw,380px)}#ntl{max-height:50vh;overflow:auto;margin:8px 0}.nti{border-bottom:1px solid #e2e8f0;padding:8px 6px;font-size:15px;line-height:1.35}.nti small{display:block;color:#64748b;font-size:12px}
 #aks,#abn,#arx{display:block;width:100%;margin-top:6px}
 @media(max-width:480px){.rb{grid-template-columns:repeat(4,1fr)}}
+/* Modo enfoque: al repasar, el panel cubre todo el mapa (el mapa sigue ahí, solo oculto) */
+body.fm #pp{top:0;left:0;right:0;bottom:0;width:auto;height:auto;border-radius:0;box-shadow:none}
+body.fm #ppx,body.fm #zc{display:none}
+body.fm #cv{visibility:hidden}
+body.fm #ppb{max-width:640px;margin:0 auto;padding:16px 14px}
 </style></head><body>
 <header><button id=bnt aria-label="Avisos" title="Avisos (B)">🔔<span id=nb hidden></span></button><button id=bm></button><label class=sw><input type=checkbox id=bx><i></i>🎓 Estudiar</label><button id=bkb aria-label="Atajos de teclado">⌨</button><button id=bnum aria-label="Números automáticos" title="Números automáticos">🔢</button><button id=bcol aria-label="Color por nivel" title="Color por nivel">🌈</button><button id=bh>🧠<span class=lb> MAYOR</span></button><button class=ed id=bq>➜<span class=lb> Flechas</span></button><button class=ed id=bar>▦<span class=lb> Ordenar</span></button><button class=ed id=bau hidden>↩<span class=lb> Deshacer</span></button></header>
 <main><svg id=cv><g id=w></g></svg><aside id=pp><button id=ppx aria-label="Cerrar panel">›</button><div id=ppb><div id=ppt>Conexiones</div><div class=ppr><input id=ppi placeholder="Escribir…" enterkeyhint=done autocomplete=off><button id=ppo aria-label="Poner en la flecha">✓</button></div><div id=ppl></div><div class=ppf><button id=ppa title="Añadir a predeterminados" aria-label="Añadir a predeterminados">＋</button><button id=ppd title="Quitar predeterminados" aria-label="Quitar predeterminados">🗑</button></div><div id=ank></div></div></aside><div id=zc><button id=bfit aria-label="Vista general">⤢</button><button id=zi aria-label="Acercar">+</button><button id=zo aria-label="Alejar">−</button></div></main>
@@ -610,7 +615,7 @@ let PD=[],pdm=0,pph=0,ppk='';
 try{PD=JSON.parse(ls('mc_pd')||'null')}catch(e){}
 if(!Array.isArray(PD)||!PD.length)PD=['es','sirve para','es un','forma parte de','se divide en','produce','genera','se diferencia'];
 const svPD=()=>{try{localStorage.mc_pd=JSON.stringify(PD)}catch(e){}};
-function ppu(){const st=mode=='s',v=st?((!!AK||!!BRA()||!!RPM)&&!pph):(mode=='e'&&!pph&&(qc||selE!=null));document.body.classList.toggle('pp',v);$('ppt').textContent=st?'🧠 Repasar':'Conexiones';if(!v||st)return;
+function ppu(){const st=mode=='s',v=st?((!!AK||!!BRA()||!!RPM)&&!pph):(mode=='e'&&!pph&&(qc||selE!=null));document.body.classList.toggle('pp',v);document.body.classList.toggle('fm',!!(v&&st&&RPM));$('ppt').textContent=st?'🧠 Repasar':'Conexiones';if(!v||st)return;
 const d=S.edges[selE],l=(d&&d.l)||'',kk=PD.join('\u0001')+'\u0002'+l+'\u0002'+pdm;if(kk===ppk)return;ppk=kk;
 $('ppl').innerHTML=PD.map((w,i)=>`<button type=button data-w="${i}"${w==l?' class=on':''}>${esc(w)}</button>`).join('');
 if(document.activeElement!==$('ppi'))$('ppi').value=l}
