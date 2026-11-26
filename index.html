@@ -464,15 +464,20 @@ else if(g==3){if(sp+1>=L)x.s=2;else{x.s=ls;x.p=sp+1;m=stp[sp+1]}}
 else x.s=2;
 if(m==null){x.s=2;x.k=Math.min(36500,Math.max(1,Math.round(St/FF*(Math.pow(rt||.9,1/FD)-1))));x.u=fDay(now,x.k)}else x.u=now+m*6e4;
 return x}
-function fsAll(c,now,rt){const o=[1,2,3,4].map(g=>fsNext(c,g,now,rt));
+/* fuzz como en Anki/ts-fsrs: no toca intervalos <2,5 d; margen ±15 % (2,5-7 d), ±10 % (7-20 d), ±5 % (>20 d). Semilla = tarjeta + nº de repasos, así la etiqueta del botón coincide con lo que se guarda */
+const fRnd=a=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+function fFuzz(k,u,ed){if(k<2.5)return k;let d=1;[[2.5,7,.15],[7,20,.1],[20,1/0,.05]].forEach(r=>{d+=r[2]*Math.max(Math.min(k,r[1])-r[0],0)});const hi=Math.min(36500,Math.round(k+d)),lo=Math.min(hi,Math.max(2,Math.round(k-d),ed+1));return lo+Math.floor(u*(hi-lo+1))}
+function fsAll(c,now,rt,id){const o=[1,2,3,4].map(g=>fsNext(c,g,now,rt)),u=fRnd((id||0)*7919+((c&&c.n)||0)),ed=c&&c.l?Math.floor((now-c.l)/864e5):0;
+o.forEach(x=>{if(x.k){x.k=fFuzz(x.k,u,ed);x.u=fDay(now,x.k)}});
 if(o[1].k&&o[2].k&&o[3].k){const h=Math.min(o[1].k,o[2].k),g=Math.max(o[2].k,h+1),e=Math.max(o[3].k,g+1);[h,g,e].forEach((k,i)=>{o[i+1].k=k;o[i+1].u=fDay(now,k)})}
 return o}
 function fFmt(m){if(m<1)return'<1 min';if(m<60)return Math.round(m)+' min';const h=m/60;if(h<24)return Math.round(h)+' h';const d=h/24;if(d<30)return Math.round(d)+' d';const z=(d<365?d/30.4:d/365).toFixed(1).replace('.',',').replace(',0','');return z+(d<365?' mes':' años')}
 const fLab=(x,now)=>x.k?fFmt(x.k*1440):fFmt((x.u-now)/6e4);
 function fsd(){if(!S.fs){const F=S.fs={c:{},r:.9},o=S.srs;if(o){Object.keys(o).forEach(k=>{const r=o[k],n=M(k.slice(1));if(!n||!r||!(r.r>0))return;const iv=Math.max(1,r.i||1),u=(r.d||0)*864e5;F.c[n.id]={s:2,d:fcl(5+(2.5-(r.e||2.5))*4),t:iv,u,l:u-iv*864e5,p:0,n:r.r,f:0}});delete S.srs}}return S.fs}
+function cleanBury(){const F=fsd();if(!F.bury)return;const today=(d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate())(new Date());Object.keys(F.bury).forEach(k=>{if(F.bury[k]!==today)delete F.bury[k]})}
 const CD=n=>!n.f&&(n.t||n.i||n.a||n.u);
 function fsCards(){nums();const o=[],b=BRA(),f=id=>{o.push(id);(KID[id]||[]).forEach(f)};RT.forEach(f);return o.map(M).filter(n=>n&&CD(n)&&(!b||b.set.has(n.id)))}
-function fsQ(now){const F=fsd(),l=[],r=[],nw=[],la=[];fsCards().forEach(n=>{const c=F.c[n.id];if(!c||!c.s)nw.push(n);else if(c.s==2){if(c.u<=now)r.push([fR(Math.max(0,(now-c.l)/864e5),c.t),n])}else if(c.u<=now)l.push([c.u,n]);else if(c.u<=now+12e5)la.push([c.u,n])});
+function fsQ(now){cleanBury();const F=fsd(),today=(d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate())(new Date()),buried=k=>F.bury&&F.bury[k]===today,l=[],r=[],nw=[],la=[];fsCards().forEach(n=>{const p=PAR[n.id];if(p!=null&&buried(p+'>'+n.id))return;const c=F.c[n.id];if(!c||!c.s)nw.push(n);else if(c.s==2){if(c.u<=now)r.push([fR(Math.max(0,(now-c.l)/864e5),c.t),n])}else if(c.u<=now)l.push([c.u,n]);else if(c.u<=now+12e5)la.push([c.u,n])});
 const s=a=>a.sort((x,y)=>x[0]-y[0]).map(x=>x[1]);return{l:s(l),r:s(r),n:nw,la:s(la)}}
 function RPF(n,ex){if(ex||!RPM||BRM||mode!='s'||!HH(n)||!CD(n))return'';const c=fsd().c[n.id];return c&&c.w?'#fca5a5':(!c||!c.s||c.u<=Date.now())?'#d1d5db':''}
 function AKH(n){return mode=='s'&&AK&&AK.id==n.id}
@@ -489,16 +494,16 @@ return fCnt('')+'<div style="font-size:18px;margin:6px 0">🎉 ¡Listo por ahora
 function akr(){const o=$('ank');if(AK&&!M(AK.id))AK=null;const n=AK&&M(AK.id);
 if(!n){if(RPM&&mode=='s')o.innerHTML=rpEnd();else{const b=BRA();o.innerHTML=b?brInfo(b):'<i>Toca un cuadro que diga «Concepto oculto» y aquí te hago la pregunta.</i>'}return}
 const R=nums(),p=PAR[n.id],e=p&&S.edges.find(d=>d.a==p&&d.b==n.id),lv=R[n.id]=='1'?1:+((String(R[n.id]).match(/(\d+)\./)||[0,1])[1]);
-const ch=[];let x=p&&PAR[p],g=0;while(x&&g++<40){ch.unshift(x);x=PAR[x]}
 const nm=(id,f)=>{const m=M(id);return(R[id]||'')+' «'+((!f&&HH(m))?'···':((m.t||'').trim().slice(0,70)||'imagen o audio'))+'»'};
-let s=fCnt(AK.c)+'<div style="color:#475569;font-size:13px">Nivel '+lv+' · '+esc(R[n.id]||'')+'</div>';
-if(ch.length)s+='<div style="color:#64748b;font-size:12px;margin-top:2px">'+esc(ch.map(i=>nm(i)).join(' → '))+'</div>';
+const cr=fsd().c[n.id],rTxt=(cr&&cr.s==2&&cr.l&&AK.st<2)?' · Prob. de recordar: <b>'+Math.round(fR(Math.max(0,(Date.now()-cr.l)/864e5),cr.t)*100)+'%</b>':'';
+let s=fCnt(AK.c)+'<div style="color:#475569;font-size:13px">Nivel '+lv+' · '+esc(R[n.id]||'')+rTxt+'</div>';
 s+=p?'<div style="font-size:17px;margin:8px 0">'+esc(nm(p,1))+'<br>— '+esc((e&&e.l)||'…')+' →<br><b>¿?</b></div>':'<div style="font-size:17px;margin:8px 0"><b>¿Cuál es el tema principal del mapa?</b></div>';
 if(AK.st==0)s+='<button id=aks>👁 Mostrar respuesta</button>';
-else if(AK.st==1){const F=fsd(),now=Date.now(),A=fsAll(F.c[n.id],now,F.r||.9);s+='<div style="background:#f1f5f9;border-radius:8px;padding:8px;margin:6px 0;white-space:pre-wrap">'+esc((n.t||'').trim()||'(imagen o audio)')+'</div><div class=rb>'+['Otra vez','Difícil','Bien','Fácil'].map((t,i)=>'<button class=q'+(i+1)+' data-q='+(i+1)+'>'+t+'<small>'+fLab(A[i],now)+'</small></button>').join('')+'</div>'}
+else if(AK.st==1){const F=fsd(),now=Date.now(),A=fsAll(F.c[n.id],now,F.r||.9,n.id);s+='<div style="background:#f1f5f9;border-radius:8px;padding:8px;margin:6px 0;white-space:pre-wrap">'+esc((n.t||'').trim()||'(imagen o audio)')+'</div><div class=rb>'+['Otra vez','Difícil','Bien','Fácil'].map((t,i)=>'<button class=q'+(i+1)+' data-q='+(i+1)+'>'+t+'<small>'+fLab(A[i],now)+'</small></button>').join('')+'</div>'}
 else s+='<div style="margin:8px 0">'+esc(AK.msg||'')+'</div><i>Toca otro «Concepto oculto» para seguir.</i>'+(BRA()?'<button id=abn>➡ Siguiente de la rama</button>':'');
 o.innerHTML=s}
-function rateA(g){const n=M(AK.id),F=fsd(),now=Date.now(),x=fsAll(F.c[n.id],now,F.r||.9)[g-1];delete x.k;F.c[n.id]=x;if(RPM||g==1)n.r=0;save();
+function buryTouching(nid){const F=fsd();F.bury=F.bury||{};const today=(d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate())(new Date()),pa=PAR[nid],self=pa!=null?pa+'>'+nid:null;S.edges.forEach(e=>{if(e.a==nid||e.b==nid||(pa!=null&&(e.a==pa||e.b==pa))){const k=e.a+'>'+e.b;if(k!==self)F.bury[k]=today}})}
+function rateA(g){const n=M(AK.id),F=fsd(),now=Date.now(),x=fsAll(F.c[n.id],now,F.r||.9,n.id)[g-1];delete x.k;F.c[n.id]=x;buryTouching(n.id);if(RPM||g==1)n.r=0;save();
 if(RPM){if(g==1)tip('🔴 Te lo vuelvo a preguntar en '+fFmt((x.u-now)/6e4),3000);rpNext();return}AK.st=2;AK.msg='Próximo repaso en '+fFmt((x.u-now)/6e4)+'.';akr();draw()}
 $('ank').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id=='abn')return nextB();if(b.id=='arx')return rpNext();if(!AK)return;if(b.id=='aks'){AK.st=1;M(AK.id).r=1;akr();draw();return}if(b.dataset.q)rateA(+b.dataset.q)};
 addEventListener('change',e=>{if(e.target.matches&&e.target.matches('.rsel')){fsd().r=+e.target.value;save()}});
